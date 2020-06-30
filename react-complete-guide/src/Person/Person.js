@@ -1,10 +1,13 @@
 import React from 'react';
+import './Person.css';
 
+// This type of component that has no state in it is called a stateless, dumb or presentational component, this one is particularly made using a functional component
 const person = (props) => {
     return (
-        <div>
-                <p>I am {props.name}, and I am {props.age} years old !</p>
+        <div className="person">
+                <p onClick={props.click}>I am {props.name}, and I am {props.age} years old!</p>
                 <p>{props.children}</p>
+                <input type="text" onChange={props.changed} value={props.name} />
         </div>)
 }
 
