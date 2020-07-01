@@ -6,13 +6,13 @@ import Validation from './Validation/Validation';
 function App() {
   const [state, setState] = useState({textEntered: ""});
 
-  const setTextEntered = (event) =>
+  const setTextEnteredHandler = (event) =>
   {
     const textEntered = event.target.value;
     setState({textEntered: textEntered});
   }
 
-  const deleteChar = (index) =>
+  const deleteCharHandler = (index) =>
   {
     let textInputToArray = state.textEntered.split("");
     textInputToArray.splice(index, 1)
@@ -20,10 +20,10 @@ function App() {
     setState({ textEntered: updatedText });
   }
 
-  const listChars = state.textEntered.split("").map((letterOfWord, index) => <Char key={index} letter={letterOfWord} click={() => deleteChar(index)} />);
+  const listChars = state.textEntered.split("").map((letterOfWord, index) => <Char key={index} letter={letterOfWord} click={() => deleteCharHandler(index)} />);
   return (
     <div className="App">
-      <input type="text" onChange={setTextEntered} value={state.textEntered}/>
+      <input type="text" onChange={setTextEnteredHandler} value={state.textEntered}/>
       <p>{state.textEntered.length}</p>
       {listChars}
       <Validation textLength={state.textEntered.length} />
