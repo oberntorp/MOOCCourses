@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import CharComponent from './CharComponent/CharComponent';
-import ValidationComponent from './ValidationComponent/ValidationComponent';
+import Char from './Char/Char';
+import Validation from './Validation/Validation';
 
 function App() {
   const [state, setState] = useState({textEntered: ""});
@@ -20,13 +20,13 @@ function App() {
     setState({ textEntered: updatedText });
   }
 
-  const listCharComponents = state.textEntered.split("").map((letterOfWord, index) => <CharComponent key={index} letter={letterOfWord} click={() => deleteChar(index)} />);
+  const listChars = state.textEntered.split("").map((letterOfWord, index) => <Char key={index} letter={letterOfWord} click={() => deleteChar(index)} />);
   return (
     <div className="App">
       <input type="text" onChange={setTextEntered} value={state.textEntered}/>
       <p>{state.textEntered.length}</p>
-      <ValidationComponent textLength={state.textEntered.length} />
-      {listCharComponents}
+      {listChars}
+      <Validation textLength={state.textEntered.length} />
     </div>
   );
 }
