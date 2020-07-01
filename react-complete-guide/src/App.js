@@ -29,15 +29,29 @@ const App = props => {
     });
   }
 
+  const changeNameHandler = (event, idOfPersonToCange) =>
+  {
+    const personIndex = personsState.persons.findIndex(p => p.id === idOfPersonToCange);
+    const person = {
+      ...personsState.persons[personIndex]
+    };
+    person.name = event.target.value;
+
+    const persons = [...personsState.persons];
+    persons[personIndex] = person;
+
+    setPersonsState({
+      persons: persons,
+      someOtherState: "Another state value",
+      showPersons: true 
+    });
+  }
+
   const showPersonsHandler = () =>
   {
     const doesShowPersons = personsState.showPersons;
     setPersonsState({
-        persons: [
-          { name: "Oskar", age: 28 },
-          { name: "Eliot", age: 27 },
-          { name: "Maximilian", age: 29 }
-        ],
+        persons: personsState.persons,
         someOtherState: "Another state value",
         showPersons: !doesShowPersons 
       });
@@ -55,7 +69,7 @@ const App = props => {
   {
     persons = (
       <div>
-        {personsState.persons.map((p, i) => <Person key={p.id} name={p.name} age={p.age} click={() => deletePersonHandler(i)}/>)}
+        {personsState.persons.map((p, i) => <Person name={p.name} age={p.age} key={p.id} changed={(event) => changeNameHandler(event, p.id)} click={() => deletePersonHandler(i)}/>)}
       </div>
     )
   }
