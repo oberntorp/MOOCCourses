@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import CharComponent from './CharComponent/CharComponent';
+import ValidationComponent from './ValidationComponent/ValidationComponent';
 
 function App() {
+  const [state, setState] = useState({textEntered: ""});
+
+  const setTextEntered = (event) =>
+  {
+    const textEntered = event.target.value;
+    setState({textEntered: textEntered});
+  }
+
+  const deleteChar = (index) =>
+  {
+    let textInputToArray = state.textEntered.split("");
+    textInputToArray.splice(index, 1)
+    const updatedText = textInputToArray.join("");
+    setState({ textEntered: updatedText });
+  }
+
+  const listCharComponents = state.textEntered.split("").map((letterOfWord, index) => <CharComponent key={index} letter={letterOfWord} click={() => deleteChar(index)} />);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type="text" onChange={setTextEntered} value={state.textEntered}/>
+      <p>{state.textEntered.length}</p>
+      <ValidationComponent textLength={state.textEntered.length} />
+      {listCharComponents}
     </div>
   );
 }
