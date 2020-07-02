@@ -1,7 +1,7 @@
 import React, { /*Component*/ useState } from 'react';
 import './App.css';
-import Radium, {StyleRoot} from 'radium';
 import Person from './Person/Person';
+import styled from 'styled-components';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 const App = props => {
@@ -58,14 +58,18 @@ const App = props => {
       });
   }
 
-  const btnStyle = {
-    font: "inherit",
-    backgroundColor: "green",
-    color: "white",
-    border: "1px solid blue",
-    padding: "4px",
-    cursor: "pointer",
-  };
+  const StyledButton = styled.button`
+    font: inherit;
+    background-color: ${props => props.otherBg ? "red" : "green"};
+    color: white;
+    border: 1px solid blue;
+    padding: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: ${props => props.otherBg ? "pink" : "lightgreen"};
+      color: black;
+    }
+  `;
 
   let classes = [];
 
@@ -88,11 +92,12 @@ const App = props => {
       </div>
     )
   }
+
   return (
     <div className="App">
       <h1>Hi, I am a react app!</h1>
       <p className={classes}>It is working tjoho!</p>
-      <button onClick={showPersonsHandler} style={btnStyle}>Show/Hide Persons</button>
+    <StyledButton otherBg={personsState.showPersons} onClick={showPersonsHandler}>Show/Hide Persons</StyledButton>
       {persons}
     </div>
   );
@@ -141,4 +146,4 @@ class App extends Component {
   }
 }*/
 
-export default Radium(App);
+export default App;
