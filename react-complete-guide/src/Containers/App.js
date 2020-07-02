@@ -63,9 +63,7 @@ const App = props => {
   if(personsState.showPersons)
   {
     persons = (
-      <div>
         <Persons persons={personsState.persons} clicked={deletePersonHandler} changed={changeNameHandler}/>
-      </div>
     )
   }
 
