@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from './cockpit.css';
 
 const cockpit = (props) =>
 {
+  useEffect(() => {
+    "The equivalent of componnentDidUpdate/Mount hooks for functional components"
+    // To demonstrate that this can (both for done creating and updating) be problematic:
+    setTimeout(() => alert("UseEffect", 1000));
+  }, [props.persons]); // <- to run as (componentDidUpdate) pass array with prop to watch, if the array is empty it will only run on componentdidupdate
   let assignedClasses = [];
 
   if(props.persons.length <= 2){
@@ -23,7 +28,7 @@ const cockpit = (props) =>
 
     return(
         <div className={classes.Cockpit}>
-            <h1>Hi, I am a react app!</h1>
+            <h1>{props.title}</h1>
             <p className={assignedClasses}>It is working tjoho!</p>
             <button className={buttonClasses} onClick={props.clicked}>Show/Hide Persons</button>
         </div>

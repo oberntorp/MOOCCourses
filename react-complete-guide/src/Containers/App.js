@@ -5,15 +5,35 @@ import Cockpit from '../components/Cockpit/Cockpit';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 class App extends Component{
-  state = {
-    persons: [
-      { id: "p1", name: "Oskar", age: 28 },
-      { id: "p2", name: "Eliot", age: 27 },
-      { id: "p3", name: "Max", age: 28 }
-    ],
-    someOtherState: "Another state value",
-    showPersons: false
-  };
+  constructor(props){
+    super(props);
+    console.log("[App.js] constructor");
+    this.state = {
+      persons: [
+        { id: "p1", name: "Oskar", age: 28 },
+        { id: "p2", name: "Eliot", age: 27 },
+        { id: "p3", name: "Max", age: 28 }
+      ],
+      someOtherState: "Another state value",
+      showPersons: false
+    };
+  }
+
+  static getDerivedStateFromProps(props, state){
+    console.log("[App.js] getDerivedStateFromProps", state);
+    return state;
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    console.log("[App.js] shouldComponenetUpdate");
+    return true // This hook must return a boolean
+
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot){
+    console.log("[App.js] componentDidUpdate");
+    console.log(snapshot);
+  }
 
   deletePersonHandler = (indexOfPersonToDelete) =>
   {
@@ -50,7 +70,11 @@ class App extends Component{
       });
   }
 
+  componentDidMount(){
+    console.log("[App.js] component did mount");
+  }
   render(){
+    console.log("[App.js] render");
     let persons = null;
 
     if(this.state.showPersons)
@@ -61,7 +85,7 @@ class App extends Component{
     }
     return (
       <div className={classes.App}>
-        <Cockpit persons={this.state.persons} clicked={this.showPersonsHandler} showPersons={this.state.showPersons}/>
+        <Cockpit title={this.props.appTitle} persons={this.state.persons} clicked={this.showPersonsHandler} showPersons={this.state.showPersons}/>
         {persons}
       </div>
     );
