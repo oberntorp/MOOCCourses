@@ -1,11 +1,11 @@
-import React, { /*Component*/ useState } from 'react';
+import React, { Component } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
-const App = props => {
-  const [personsState, setPersonsState] = useState({
+class App extends Component{
+  state = {
     persons: [
       { id: "p1", name: "Oskar", age: 28 },
       { id: "p2", name: "Eliot", age: 27 },
@@ -13,109 +13,59 @@ const App = props => {
     ],
     someOtherState: "Another state value",
     showPersons: false
-  });
+  };
 
-  const [otherState, setOtherState] = useState("Another state value");
-
-  console.log(personsState, otherState);
-
-  const deletePersonHandler = (indexOfPersonToDelete) =>
+  deletePersonHandler = (indexOfPersonToDelete) =>
   {
-    const currentPursons = [...personsState.persons];
+    const currentPursons = [...this.state.persons];
     currentPursons.splice(indexOfPersonToDelete, 1);
-    setPersonsState({
+    this.setState({
       persons: currentPursons,
       someOtherState: "Another state value",
       showPersons: true
     });
   }
 
-  const changeNameHandler = (event, idOfPersonToCange) =>
+  changeNameHandler = (event, idOfPersonToCange) =>
   {
-    const personIndex = personsState.persons.findIndex(p => p.id === idOfPersonToCange);
+    const personIndex = this.state.persons.findIndex(p => p.id === idOfPersonToCange);
     const person = {
-      ...personsState.persons[personIndex]
+      ...this.state.persons[personIndex]
     };
     person.name = event.target.value;
 
-    const persons = [...personsState.persons];
+    const persons = [...this.state.persons];
     persons[personIndex] = person;
 
-    setPersonsState({
+    this.setState({
       persons: persons,
-      someOtherState: "Another state value",
-      showPersons: true 
     });
   }
 
-  const showPersonsHandler = () =>
+  showPersonsHandler = () =>
   {
-    const doesShowPersons = personsState.showPersons;
-    setPersonsState({
-        persons: personsState.persons,
-        someOtherState: "Another state value",
+    const doesShowPersons = this.state.showPersons;
+    this.setState({
         showPersons: !doesShowPersons 
       });
   }
 
-  let persons = null;
+  render(){
+    let persons = null;
 
-  if(personsState.showPersons)
-  {
-    persons = (
-        <Persons persons={personsState.persons} clicked={deletePersonHandler} changed={changeNameHandler}/>
-    )
-  }
-
-  return (
-    <div className={classes.App}>
-      <Cockpit persons={personsState.persons} clicked={showPersonsHandler} showPersons={personsState.showPersons}/>
-      {persons}
-    </div>
-  );
-
-}
-/*
-This is the preferrred way of creating components with state, old one
-
-class App extends Component {
-  state = {
-    persons: [
-      { name: "Oskar", age: 28 },
-      { name: "Eliot", age: 27 },
-      { name: "Max", age: 28 }
-    ],
-    someOtherState: "Another state value"
-  };
-
-  switchNameHandler = () =>
-  {
-    //console.log("switchNameHandler called!");
-    // Changing state is not done like this: this.state.persons[0].name = "Oskar B";
-    
-    // Rather like this:
-    this.setState({
-      persons: [
-        { name: "Oskar B", age: 28 },
-        { name: "Eliot", age: 27 },
-        { name: "Maximilian", age: 29 }
-      ]
-    })
-  }
-
-  render() {
+    if(this.state.showPersons)
+    {
+      persons = (
+          <Persons persons={this.state.persons} clicked={this.deletePersonHandler} changed={this.changeNameHandler}/>
+      )
+    }
     return (
-      <div className="App">
-        <h1>Hi, I am a react app!</h1>
-        <p>It is working tjoho!</p>
-        <button onClick={this.switchNameHandler}>Switch name</button>
-        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
-        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My hobbies: Computers</Person>
-        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
-
+      <div className={classes.App}>
+        <Cockpit persons={this.state.persons} clicked={this.showPersonsHandler} showPersons={this.state.showPersons}/>
+        {persons}
       </div>
     );
   }
-}*/
+}
 
 export default App;

@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Person.css';
 // This type of component that has no state in it is called a stateless, dumb or presentational component, this one is particularly made using a functional component
+// A functional component not managing state is called s presentational component
 const person = (props) => {
         return (
                 <div className={classes.person}>
