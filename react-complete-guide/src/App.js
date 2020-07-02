@@ -1,5 +1,5 @@
 import React, { /*Component*/ useState } from 'react';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
@@ -57,17 +57,17 @@ const App = props => {
       });
   }
 
-  let classes = [];
+  let assignedClasses = [];
 
   if(personsState.persons.length <= 2){
-    classes.push("red");
+    assignedClasses.push(classes.red);
   }
 
   if(personsState.persons.length <= 1){
-    classes.push("bold");
+    assignedClasses.push(classes.bold);
   }
 
-  classes = classes.join(" ");
+  assignedClasses = assignedClasses.join(" ");
 
   let persons = null;
   if(personsState.showPersons)
@@ -80,10 +80,10 @@ const App = props => {
   }
 
   return (
-    <div className="App">
+    <div className={classes.App}>
       <h1>Hi, I am a react app!</h1>
-      <p className={classes}>It is working tjoho!</p>
-    <button otherBg={personsState.showPersons} onClick={showPersonsHandler}>Show/Hide Persons</button>
+      <p>It is working tjoho!</p>
+    <button className={classes.button} onClick={showPersonsHandler}>Show/Hide Persons</button>
       {persons}
     </div>
   );
