@@ -27,7 +27,7 @@
 .bold{
   font-weight: bold;
 }
-.button{
+.App button{
 font: inherit;
 background-color: green;
 color: white;
@@ -35,9 +35,17 @@ border: 1px solid blue;
 padding: 4px;
 cursor: pointer;
 }
-button:hover {
-  background-color: pink;
+.App button:hover {
+  background-color: lightgreen;
   color: black;
+}
+
+.App button.Red{
+  background-color: red;
+}
+
+.App button.Red:hover{
+  background-color: salmon;
 }
 
 @keyframes App-logo-spin {

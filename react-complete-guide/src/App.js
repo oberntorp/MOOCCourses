@@ -1,6 +1,7 @@
 import React, { /*Component*/ useState } from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 const App = props => {
@@ -70,20 +71,25 @@ const App = props => {
   assignedClasses = assignedClasses.join(" ");
 
   let persons = null;
+
+  let buttonClasses = "";
+
   if(personsState.showPersons)
   {
     persons = (
       <div>
-        {personsState.persons.map((p, i) => <Person name={p.name} age={p.age} key={p.id} changed={(event) => changeNameHandler(event, p.id)} click={() => deletePersonHandler(i)}/>)}
+        {personsState.persons.map((p, i) => <ErrorBoundary key={p.id}><Person name={p.name} age={p.age} changed={(event) => changeNameHandler(event, p.id)} click={() => deletePersonHandler(i)}/></ErrorBoundary>)}
       </div>
     )
+
+    buttonClasses = classes.Red;
   }
 
   return (
     <div className={classes.App}>
       <h1>Hi, I am a react app!</h1>
-      <p>It is working tjoho!</p>
-    <button className={classes.button} onClick={showPersonsHandler}>Show/Hide Persons</button>
+      <p className={assignedClasses}>It is working tjoho!</p>
+    <button className={buttonClasses} onClick={showPersonsHandler}>Show/Hide Persons</button>
       {persons}
     </div>
   );
