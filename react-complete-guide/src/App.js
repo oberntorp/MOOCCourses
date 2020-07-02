@@ -65,10 +65,6 @@ const App = props => {
     border: "1px solid blue",
     padding: "4px",
     cursor: "pointer",
-    ":hover": {
-      backgroundColor: "lightgreen",
-      color: "black"
-    }
   };
 
   let classes = [];
@@ -91,22 +87,14 @@ const App = props => {
         {personsState.persons.map((p, i) => <Person name={p.name} age={p.age} key={p.id} changed={(event) => changeNameHandler(event, p.id)} click={() => deletePersonHandler(i)}/>)}
       </div>
     )
-
-    btnStyle.backgroundColor = "red";
-    btnStyle[":hover"] = { 
-      backgroundColor: "salmon",
-      color: "black"
-    };
   }
   return (
-    <StyleRoot>
-      <div className="App">
-        <h1>Hi, I am a react app!</h1>
-        <p className={classes}>It is working tjoho!</p>
-        <button onClick={showPersonsHandler} style={btnStyle}>Show/Hide Persons</button>
-        {persons}
-      </div>
-    </StyleRoot>
+    <div className="App">
+      <h1>Hi, I am a react app!</h1>
+      <p className={classes}>It is working tjoho!</p>
+      <button onClick={showPersonsHandler} style={btnStyle}>Show/Hide Persons</button>
+      {persons}
+    </div>
   );
 
 }
