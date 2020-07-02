@@ -1,5 +1,6 @@
 import React, { /*Component*/ useState } from 'react';
 import './App.css';
+import Radium, {StyleRoot} from 'radium';
 import Person from './Person/Person';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
@@ -59,10 +60,28 @@ const App = props => {
 
   const btnStyle = {
     font: "inherit",
+    backgroundColor: "green",
+    color: "white",
     border: "1px solid blue",
     padding: "4px",
-    cursor: "pointer"
+    cursor: "pointer",
+    ":hover": {
+      backgroundColor: "lightgreen",
+      color: "black"
+    }
   };
+
+  let classes = [];
+
+  if(personsState.persons.length <= 2){
+    classes.push("red");
+  }
+
+  if(personsState.persons.length <= 1){
+    classes.push("bold");
+  }
+
+  classes = classes.join(" ");
 
   let persons = null;
   if(personsState.showPersons)
@@ -72,14 +91,22 @@ const App = props => {
         {personsState.persons.map((p, i) => <Person name={p.name} age={p.age} key={p.id} changed={(event) => changeNameHandler(event, p.id)} click={() => deletePersonHandler(i)}/>)}
       </div>
     )
+
+    btnStyle.backgroundColor = "red";
+    btnStyle[":hover"] = { 
+      backgroundColor: "salmon",
+      color: "black"
+    };
   }
   return (
-    <div className="App">
-      <h1>Hi, I am a react app!</h1>
-      <p>It is working tjoho!</p>
-      <button onClick={showPersonsHandler} style={btnStyle}>Show/Hide Persons</button>
-      {persons}
-    </div>
+    <StyleRoot>
+      <div className="App">
+        <h1>Hi, I am a react app!</h1>
+        <p className={classes}>It is working tjoho!</p>
+        <button onClick={showPersonsHandler} style={btnStyle}>Show/Hide Persons</button>
+        {persons}
+      </div>
+    </StyleRoot>
   );
 
 }
@@ -126,4 +153,4 @@ class App extends Component {
   }
 }*/
 
-export default App;
+export default Radium(App);
