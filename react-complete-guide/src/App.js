@@ -1,7 +1,6 @@
 import React, { /*Component*/ useState } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import styled from 'styled-components';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 const App = props => {
@@ -58,19 +57,6 @@ const App = props => {
       });
   }
 
-  const StyledButton = styled.button`
-    font: inherit;
-    background-color: ${props => props.otherBg ? "red" : "green"};
-    color: white;
-    border: 1px solid blue;
-    padding: 4px;
-    cursor: pointer;
-    &:hover {
-      background-color: ${props => props.otherBg ? "pink" : "lightgreen"};
-      color: black;
-    }
-  `;
-
   let classes = [];
 
   if(personsState.persons.length <= 2){
@@ -97,7 +83,7 @@ const App = props => {
     <div className="App">
       <h1>Hi, I am a react app!</h1>
       <p className={classes}>It is working tjoho!</p>
-    <StyledButton otherBg={personsState.showPersons} onClick={showPersonsHandler}>Show/Hide Persons</StyledButton>
+    <button otherBg={personsState.showPersons} onClick={showPersonsHandler}>Show/Hide Persons</button>
       {persons}
     </div>
   );
