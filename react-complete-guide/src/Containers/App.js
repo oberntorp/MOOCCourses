@@ -1,7 +1,7 @@
 import React, { /*Component*/ useState } from 'react';
 import classes from './App.css';
-import Person from './Person/Person';
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+import Persons from '../Components/Persons/Persons';
+import Cockpit from '../Components/Cockpit/Cockpit';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 const App = props => {
@@ -58,38 +58,20 @@ const App = props => {
       });
   }
 
-  let assignedClasses = [];
-
-  if(personsState.persons.length <= 2){
-    assignedClasses.push(classes.red);
-  }
-
-  if(personsState.persons.length <= 1){
-    assignedClasses.push(classes.bold);
-  }
-
-  assignedClasses = assignedClasses.join(" ");
-
   let persons = null;
-
-  let buttonClasses = "";
 
   if(personsState.showPersons)
   {
     persons = (
       <div>
-        {personsState.persons.map((p, i) => <ErrorBoundary key={p.id}><Person name={p.name} age={p.age} changed={(event) => changeNameHandler(event, p.id)} click={() => deletePersonHandler(i)}/></ErrorBoundary>)}
+        <Persons persons={personsState.persons} clicked={deletePersonHandler} changed={changeNameHandler}/>
       </div>
     )
-
-    buttonClasses = classes.Red;
   }
 
   return (
     <div className={classes.App}>
-      <h1>Hi, I am a react app!</h1>
-      <p className={assignedClasses}>It is working tjoho!</p>
-    <button className={buttonClasses} onClick={showPersonsHandler}>Show/Hide Persons</button>
+      <Cockpit persons={personsState.persons} clicked={showPersonsHandler} showPersons={personsState.showPersons}/>
       {persons}
     </div>
   );
