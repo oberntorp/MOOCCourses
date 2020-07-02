@@ -1,7 +1,7 @@
 import React, { /*Component*/ useState } from 'react';
 import classes from './App.css';
-import Persons from '../Components/Persons/Persons';
-import Cockpit from '../Components/Cockpit/Cockpit';
+import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 const App = props => {
