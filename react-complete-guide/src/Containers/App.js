@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
+import Aux from '../hoc/Auxiliary';
+import withClass from '../hoc/withClass';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 class App extends Component{
@@ -16,7 +18,8 @@ class App extends Component{
       ],
       someOtherState: "Another state value",
       showPersons: false,
-      showCockpit: true
+      showCockpit: true,
+      changeCounter: 0
     };
   }
 
@@ -58,8 +61,12 @@ class App extends Component{
     const persons = [...this.state.persons];
     persons[personIndex] = person;
 
-    this.setState({
-      persons: persons,
+    // If I am to update a state and I am dependent on the previous state, this way should be used to avoid errors
+    this.setState((prevState, props) => {
+      return {
+        persons: persons,
+        changeCounter: prevState.changeCounter+1
+      }
     });
   }
 
@@ -85,15 +92,15 @@ class App extends Component{
       )
     }
     return (
-      <div className={classes.App}>
+      <Aux>
         <button onClick={() => {
           this.setState({showCockpit: false});
       }}>Remove cockpit</button>
         {this.state.showCockpit ? <Cockpit title={this.props.appTitle} personsLength={this.state.persons.length} clicked={this.showPersonsHandler} showPersons={this.state.showPersons}/> : null}
         {persons}
-      </div>
+      </Aux>
     );
   }
 }
 
-export default App;
+export default withClass(App, classes.App);

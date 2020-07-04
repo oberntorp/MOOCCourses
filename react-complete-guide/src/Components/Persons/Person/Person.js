@@ -1,18 +1,44 @@
-import React from 'react';
+import React, {Component} from 'react';
 import classes from './Person.css';
 import Aux from '../../../hoc/Auxiliary';
-// This type of component that has no state in it is called a stateless, dumb or presentational component, this one is particularly made using a functional component
-// A functional component not managing state is called s presentational component
-const person = (props) => {
-        console.log("[Person.js] rendering...");
-        return (
-                // React.Fragment is also a higher order component, it could be used instead as it is already built in
-                <Aux>
-                        <p onClick={props.click}>I am {props.name}, and I am {props.age} years old!</p>
-                        <p>{props.children}</p>
-                        <input type="text" onChange={props.changed} value={props.name} />
-                </Aux>
-                );
+import withClass from '../../../hoc/withClass';
+import PropTypes, { string, number, func } from 'prop-types';
+
+class Person extends Component {
+
+        constructor(props){
+                super(props);
+                this.elementRef = React.createRef();
+
+        }
+        componentDidMount(){
+
+                // -> refers to the other way of using a ref that is supported in earlier react < 16.2: this.inputElement.focus();
+                this.elementRef.current.focus();
+        }
+        render(){
+                console.log("[Person.js] rendering...");
+                return (
+                        // React.Fragment is also a higher order component, it could be used instead as it is already built in
+                        <Aux>
+                                <p onClick={this.props.click}>I am {this.props.name}, and I am {this.props.age} years old!</p>
+                                <p>{this.props.children}</p>
+                                <input 
+                                type="text" 
+                                onChange={this.props.changed} 
+                                value={this.props.name}
+                                //ref={(inputEl) => this.inputElement = inputEl} supported in react < 16.2
+                                ref={this.elementRef}/>
+                        </Aux>
+                        );
+        }
 }
 
-export default person;
+Person.propTypes = {
+        click: PropTypes.func,
+        name: string,
+        age: number,
+        changed: func
+};
+
+export default withClass(Person, classes.person);

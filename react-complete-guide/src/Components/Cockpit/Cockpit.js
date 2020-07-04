@@ -1,10 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import classes from './cockpit.css';
 
+// This type of component that has no state in it is called a stateless, dumb or presentational component, this one is particularly made using a functional component
+// A functional component not managing state is called s presentational component
 const cockpit = (props) =>
 {
+  const toggleBtnRef = useRef(null);
   useEffect(() => {
-    "The equivalent of componnentDidUpdate/componnentDidMount hooks for functional components"
+    toggleBtnRef.current.click();
+    // The equivalent of componnentDidUpdate/componnentDidMount hooks for functional components
     // To demonstrate that this can (both for done creating and updating) be problematic:
     setTimeout(() => alert("[Cockpit.js] Save data from cloud", 1000));
     return () => console.log("[Cockpit.js] clenup work") // <- equivalent to componentWillUnmount, runs before main functions of use effect and before first render cycle
@@ -30,14 +34,14 @@ const cockpit = (props) =>
   let buttonClasses = "";
 
   if(props.showPersons){
-      buttonClasses = classes.red;
+      buttonClasses = classes.Red;
   }
 
     return(
         <div className={classes.Cockpit}>
             <h1>{props.title}</h1>
             <p className={assignedClasses}>It is working tjoho!</p>
-            <button className={buttonClasses} onClick={props.clicked}>Show/Hide Persons</button>
+            <button ref={toggleBtnRef} className={buttonClasses} onClick={props.clicked}>Show/Hide Persons</button>
         </div>
     );
 }
