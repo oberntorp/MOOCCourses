@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
+import Aux from '../hoc/Auxiliary';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 class App extends Component{
@@ -85,13 +86,15 @@ class App extends Component{
       )
     }
     return (
-      <div className={classes.App}>
+      //<div className={classes.App}>
+      <Aux>
         <button onClick={() => {
           this.setState({showCockpit: false});
       }}>Remove cockpit</button>
         {this.state.showCockpit ? <Cockpit title={this.props.appTitle} personsLength={this.state.persons.length} clicked={this.showPersonsHandler} showPersons={this.state.showPersons}/> : null}
         {persons}
-      </div>
+      </Aux>
+      //</div>
     );
   }
 }
