@@ -4,17 +4,24 @@ import classes from './cockpit.css';
 const cockpit = (props) =>
 {
   useEffect(() => {
-    "The equivalent of componnentDidUpdate/Mount hooks for functional components"
+    "The equivalent of componnentDidUpdate/componnentDidMount hooks for functional components"
     // To demonstrate that this can (both for done creating and updating) be problematic:
-    setTimeout(() => alert("UseEffect", 1000));
-  }, [props.persons]); // <- to run as (componentDidUpdate) pass array with prop to watch, if the array is empty it will only run on componentdidupdate
+    setTimeout(() => alert("[Cockpit.js] Save data from cloud", 1000));
+    return () => console.log("[Cockpit.js] clenup work") // <- equivalent to componentWillUnmount, runs before main functions of use effect and before first render cycle
+  }, []); // <- to run as (componentDidUpdate) pass array with prop to watch, if the array is empty it will only run on componentDidMount
+ 
+  useEffect(() => {
+    console.log("[Cockpit.js] 2nd useEffect");
+    return () => console.log("[Cockpit.js] 2nd useEffect clenup work");
+  });
+
   let assignedClasses = [];
 
-  if(props.persons.length <= 2){
+  if(props.personsLength <= 2){
     assignedClasses.push(classes.red);
   }
 
-  if(props.persons.length <= 1){
+  if(props.personsLength <= 1){
     assignedClasses.push(classes.bold);
   }
 
@@ -35,4 +42,4 @@ const cockpit = (props) =>
     );
 }
 
-export default cockpit;
+export default React.memo(cockpit);

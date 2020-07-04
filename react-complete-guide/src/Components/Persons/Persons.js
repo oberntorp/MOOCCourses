@@ -9,7 +9,8 @@ class Persons extends Component {
 
   shouldComponentUpdate(nextProps, nextState){
     console.log("[Persons.js] shouldComponenetUpdate");
-    return true // This hook must return a boolean
+    // If this function is checking more than one prop, it is better to extend pure component that does this automatically
+    return nextProps.persons !== this.props.persons; // This hook must return a boolean
 
   }
 
@@ -28,6 +29,10 @@ class Persons extends Component {
     return this.props.persons.map((p, i) => {
       return <Person key={p.id} name={p.name} age={p.age} changed={(event) => this.props.changed(event, p.id)} click={() => this.props.clicked(i)}/>
     });
+  }
+
+  componentWillUnmount(){
+    console.log("[Persons.js] componentWillUnmount...");
   }
 }
 export default Persons;
