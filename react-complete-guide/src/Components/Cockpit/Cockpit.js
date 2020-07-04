@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import classes from './cockpit.css';
 import AuthContext from '../../context/auth-context';
-import authContext from '../../context/auth-context';
 
 // This type of component that has no state in it is called a stateless, dumb or presentational component, this one is particularly made using a functional component
 // A functional component not managing state is called s presentational component
@@ -45,7 +44,7 @@ const cockpit = (props) =>
             <p className={assignedClasses}>It is working tjoho!</p>
             <button ref={toggleBtnRef} className={buttonClasses} onClick={props.clicked}>Show/Hide Persons</button>
           <AuthContext.Consumer>
-          <button onClick={props.login}>LogIn</button>
+            { (context) => <button onClick={context.login}>LogIn</button> }
           </AuthContext.Consumer>
         </div>
     );

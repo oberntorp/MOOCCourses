@@ -12,20 +12,20 @@ class Person extends Component {
                 this.elementRef = React.createRef();
 
         }
-        componentDidMount(){
 
+        static contextType = AuthContext;
+        componentDidMount(){
                 // -> refers to the other way of using a ref that is supported in earlier react < 16.2: this.inputElement.focus();
                 this.elementRef.current.focus();
+                console.log(this.context.authenticated);
         }
         render(){
                 console.log("[Person.js] rendering...");
                 return (
                         // React.Fragment is also a higher order component, it could be used instead as it is already built in
                         <Aux>
-                                <AuthContext.Consumer>
-                                        {(context) => context.authenticated ? 
-                                        <p>Authenticated!</p>: <p>Please log in</p>}
-                                </AuthContext.Consumer>
+                                { this.context.authenticated ? 
+                                <p>Authenticated!</p>: <p>Please log in</p>}
                                 <p onClick={this.props.click}>I am {this.props.name}, and I am {this.props.age} years old!</p>
                                 <p>{this.props.children}</p>
                                 <input 
