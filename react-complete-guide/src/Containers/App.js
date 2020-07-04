@@ -4,6 +4,7 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import Aux from '../hoc/Auxiliary';
 import withClass from '../hoc/withClass';
+import AuthContext from '../context/auth-context';
 
 // A state full, container or smart component is a component that manages state, either as a function (functional components) or class based components
 class App extends Component{
@@ -19,7 +20,8 @@ class App extends Component{
       someOtherState: "Another state value",
       showPersons: false,
       showCockpit: true,
-      changeCounter: 0
+      changeCounter: 0,
+      authenticated: false
     };
   }
 
@@ -78,9 +80,14 @@ class App extends Component{
       });
   }
 
+  loginHandler = () =>{
+    this.setState({authenticated: true})
+  }
+
   componentDidMount(){
     console.log("[App.js] component did mount");
   }
+
   render(){
     console.log("[App.js] render");
     let persons = null;
@@ -96,8 +103,15 @@ class App extends Component{
         <button onClick={() => {
           this.setState({showCockpit: false});
       }}>Remove cockpit</button>
-        {this.state.showCockpit ? <Cockpit title={this.props.appTitle} personsLength={this.state.persons.length} clicked={this.showPersonsHandler} showPersons={this.state.showPersons}/> : null}
-        {persons}
+      <AuthContext.Provider value={{
+        authenticated: this.state.authenticated,
+        login: this.loginHandler
+        }}>
+      {this.state.showCockpit ?
+         <Cockpit title={this.props.appTitle} personsLength={this.state.persons.length} clicked={this.showPersonsHandler} showPersons={this.state.showPersons}/> 
+         : null}
+         {persons}
+      </AuthContext.Provider>
       </Aux>
     );
   }

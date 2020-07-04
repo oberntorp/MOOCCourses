@@ -3,6 +3,7 @@ import classes from './Person.css';
 import Aux from '../../../hoc/Auxiliary';
 import withClass from '../../../hoc/withClass';
 import PropTypes, { string, number, func } from 'prop-types';
+import AuthContext from '../../../context/auth-context';
 
 class Person extends Component {
 
@@ -21,6 +22,10 @@ class Person extends Component {
                 return (
                         // React.Fragment is also a higher order component, it could be used instead as it is already built in
                         <Aux>
+                                <AuthContext.Consumer>
+                                        {(context) => context.authenticated ? 
+                                        <p>Authenticated!</p>: <p>Please log in</p>}
+                                </AuthContext.Consumer>
                                 <p onClick={this.props.click}>I am {this.props.name}, and I am {this.props.age} years old!</p>
                                 <p>{this.props.children}</p>
                                 <input 
