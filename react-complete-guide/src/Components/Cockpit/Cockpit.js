@@ -50,4 +50,5 @@ const cockpit = (props) =>
     );
 }
 
+// React.memo, same as PureComponent but for functional components (checks didComponentUpdate for all props)
 export default React.memo(cockpit);
