@@ -9,7 +9,8 @@ const withErrorHandler = (WrappedComponent, axios) => {
             error: null
         }
 
-        componentDidMount(){
+        // Currently I do not know how to fix this in a class based manner, the course will get updated on this
+        componentWillMount(){
             this.requestInterceptor = axios.interceptors.request.use(request => {
                 this.setState({error: null});
                 return request;
