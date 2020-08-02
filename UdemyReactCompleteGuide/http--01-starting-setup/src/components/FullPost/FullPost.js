@@ -1,20 +1,50 @@
 import React, { Component } from 'react';
 
 import './FullPost.css';
+import axios from 'axios';
 
 class FullPost extends Component {
+
+    state = {
+        loadedPost: null
+    }
+
+    componentDidUpdate(){
+        if(this.props.selectedPostId){
+            if(this.isNewPostLoaded()){
+                axios.get(`/posts/${this.props.selectedPostId}`).then(response => this.setState({loadedPost: response.data}));
+            }
+        }
+    }
+
+    isNewPostLoaded = () => {
+        return (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== this.props.selectedPostId));
+    }
+
+    deletePostHandler = () => {
+        axios.delete(`/posts/${this.props.selectedPostId}`).then(response => {
+            console.log(response);
+    });
+    }
+
     render () {
         let post = <p>Please select a Post!</p>;
-        post = (
-            <div className="FullPost">
-                <h1>Title</h1>
-                <p>Content</p>
-                <div className="Edit">
-                    <button className="Delete">Delete</button>
-                </div>
-            </div>
+        if(this.props.selectedPostId){
+            post = <p>Loading...</p>;
+        }
 
-        );
+        if(this.state.loadedPost){
+            post = (
+                <div className="FullPost">
+                    <h1>{this.state.loadedPost.title}</h1>
+                    <p>{this.state.loadedPost.body}</p>
+                    <div className="Edit">
+                        <button className="Delete" onClick={this.deletePostHandler}>Delete</button>
+                    </div>
+                </div>
+    
+            );
+        }
         return post;
     }
 }
