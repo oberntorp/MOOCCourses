@@ -18,3 +18,11 @@
     margin: 16px 0;
     color: #ccc;
 }
+
+.Posts a{
+    color: black;
+    text-decoration: none;
+}
+.Posts a:hover, .Posts a:active, .Posts a.active{
+    color: #ff4800;
+}

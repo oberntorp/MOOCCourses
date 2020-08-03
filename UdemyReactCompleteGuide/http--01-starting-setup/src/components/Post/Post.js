@@ -11,4 +11,6 @@ const post = (props) => (
     </article>
 );
 
+// There is a higher order component called withProps in react-router-dom,
+// if passing on the router related props to a child component is needed
 export default post;
