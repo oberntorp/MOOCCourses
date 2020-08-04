@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from '../../../axios';
+import { Route } from 'react-router-dom';
 import './Posts.css';
 import Post from '../../../components/Post/Post';
+import FullPost from '../FullPost/FullPost';
 
 class Posts extends Component{
     state = {
@@ -25,9 +27,9 @@ class Posts extends Component{
         // <Link to={"/"+post.id} key={post.id}>
 
         // To navigate programatically do this:
-        this.props.history.push({pathname: `/${postId}`})
+        //this.props.history.push({pathname: `/posts/${postId}`})
         // Or pass a string:
-        this.props.history.push(`/${postId}`)
+        this.props.history.push(`/posts/${postId}`)
     }
 
     render(){
@@ -35,16 +37,17 @@ class Posts extends Component{
         
         if(!this.state.errorOccured){
             posts = this.state.posts.map(post => {
-                return (
-                    <Post title={post.title} author={post.author} clicked={this.postSelectedHandler.bind(this, post.id)} />)
-                //</Link>)
+                return <Post key={post.id} title={post.title} author={post.author} clicked={this.postSelectedHandler.bind(this, post.id)} />
             });
         }
 
         return(
-        <section className="Posts">
+        <div>
+             <section className="Posts">
             {posts}
         </section>
+        <Route path={`${this.props.match.url}/:id`} component={FullPost} />
+        </div>
     )};
 }
 
