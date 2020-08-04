@@ -18,7 +18,7 @@ class App extends Component {
           <li>Pass the course title to the "Course" page - pass it as a param or score bonus points by passing it as query params (you need to manually parse them though!)</li>
           <li>Load the "Course" component as a nested component of "Courses"</li>
           <li>Add a 404 error page and render it for any unknown routes</li>
-          <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
+          <li>Redirect requests to /all-courses to /courses (Your "Courses" page)</li>
         </ol>
           <header>
             <ul>
