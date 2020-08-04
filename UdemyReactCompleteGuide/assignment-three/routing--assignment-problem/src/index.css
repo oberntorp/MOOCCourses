@@ -4,3 +4,32 @@ body {
   font-family: sans-serif;
   text-align: center;
 }
+
+header ul{
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+header ul li{
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+header ul li a{
+  color: lightblue;
+  text-decoration: none;
+}
+
+header ul li a:hover, header ul li a.active{
+  color: red;
+}
+
+header ul li a.activeCust{
+  color: green;
+}
+
+.Courses a{
+  color: black;
+}

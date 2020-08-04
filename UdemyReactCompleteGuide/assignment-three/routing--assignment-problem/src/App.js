@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-
+import { BrowserRouter, Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
+import errorComponent from './components/Error/Error';
+// import Course from './containers/Course/Course';
 
 class App extends Component {
   render () {
     return (
-      <div className="App">
+      <BrowserRouter>
+        <div className="App">
         <ol style={{textAlign: 'left'}}>
           <li>Add Routes to load "Users" and "Courses" on different pages (by entering a URL, without Links)</li>
           <li>Add a simple navigation with two links => One leading to "Users", one leading to "Courses"</li>
@@ -17,7 +20,24 @@ class App extends Component {
           <li>Add a 404 error page and render it for any unknown routes</li>
           <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
         </ol>
+          <header>
+            <ul>
+              <li><NavLink to="/" exact >My users</NavLink></li>
+              <li><NavLink activeClassName="activeCust" to="/my-courses" >My courses</NavLink></li>
+            </ul>
+          </header>
+
+       <Switch>
+          <Route path="/" exact component={Users} />
+          {/* <Route path="/my-courses/:id" component={Course} /> */}
+          <Route path="/my-courses" component={Courses} />
+          <Redirect from="/courses" to={"/my-courses"}/>
+          {/* <Route path="/my-courses/:id" component={Course} /> */}
+          <Route component={errorComponent} />
+       </Switch>
+
       </div>
+      </BrowserRouter>
     );
   }
 }
