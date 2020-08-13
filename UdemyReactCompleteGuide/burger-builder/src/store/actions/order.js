@@ -44,10 +44,10 @@ export const fetchOrdersSuccess = (orders) => {
     };
 };
 
-export const fetchOrdersFailed = (errorMessage) => {
+export const fetchOrdersFailed = (error) => {
     return{
         type: actionTypes.FETCH_ORDERS_FAILED,
-        error: errorMessage
+        error: error
     };
 };
 

@@ -78,7 +78,7 @@ class ContactData extends Component{
                     value: "fastest"
                 },
             },
-            isFormValid: false,
+            isFormValid: false
     }
 
     submitOrderHandler = (event) => {

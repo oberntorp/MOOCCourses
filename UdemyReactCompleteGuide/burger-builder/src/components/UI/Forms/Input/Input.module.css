@@ -11,7 +11,7 @@
     margin-bottom: 5px;
 }
 
-.Input input[type=text], .Input input[type=email], .Input textarea, .Input select{
+.Input input[type=text], .Input input[type=email], .Input input[type=password], .Input textarea, .Input select{
     box-shadow: 1px 1px 4px 1px #efefef;
     border-width: 0px 0px 1px 0px;
     border-style: solid;
