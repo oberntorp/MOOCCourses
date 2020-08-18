@@ -6,6 +6,7 @@ import * as actions from '../../store/actions/index';
 import { connect } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import { Redirect } from 'react-router-dom'
+import { updateObject, checkValidity } from '../../shared/utility';
 
 class Auth extends Component{
     state = {
@@ -18,7 +19,8 @@ class Auth extends Component{
                     },
                     value: "",
                     validationRules: {
-                        isRequired: true
+                        isRequired: true,
+                        isEmail: true
                     },
                     isValid: false,
                     isTouched: false
@@ -31,10 +33,10 @@ class Auth extends Component{
                     },
                     value: "",
                     validationRules: {
-                        isRequired: true
+                        isRequired: true,
+                        minLength: 6,
                     },
                     isValid: false,
-                    minLength: 6,
                     isTouched: false
             }
         },
@@ -48,41 +50,15 @@ class Auth extends Component{
     }
 
     changedValueHandler = (event, formElementId) => {
-        const updatedControls = {
-            ...this.state.controls,
-            [formElementId]: {
-                ...this.state.controls[formElementId],
+        const updatedControls = updateObject(this.state.controls, {
+            [formElementId]: updateObject(this.state.controls[formElementId], {
                 value: event.target.value,
-                isValid: this.checkValidity(event.target.value, this.state.controls[formElementId].validationRules),
+                isValid: checkValidity(event.target.value, this.state.controls[formElementId].validationRules),
                 isTouched: true
-            }
-
-        }
+            })
+         });
 
         this.setState({ controls: updatedControls });
-    }
-
-    checkValidity(enteredValue, validationRules){
-        let isValid = true;
-        if(validationRules){
-            if(validationRules.isRequired){
-                isValid = enteredValue !== "" && isValid;
-            }
-    
-            if(validationRules.minLength){
-                isValid = enteredValue.length >= validationRules.minLength  && isValid;
-            }
-    
-            if(validationRules.maxLength){
-                isValid = enteredValue.length <= validationRules.maxLength && isValid;
-            }
-    
-            if(validationRules.isNumber){
-                isValid = !isNaN(enteredValue) && isValid;
-            }
-        }
-
-        return isValid;
     }
 
     submitAuthHandler = (event) => {
@@ -137,6 +113,7 @@ class Auth extends Component{
 
         return(
             <div className={classes.Auth}>
+                <h1>{(this.state.isSignUp) ? "SignUp" : "SignIn"}</h1>
                 {authRedirect}
                 {errorMessage}
                 {authForm}

@@ -5,10 +5,6 @@ import PropTypes from 'prop-types';
 
 class OrderSummary extends Component {
 
-    componentDidUpdate(){
-        console.log("[OrderSummary] componentDidUpdate");
-    }
-
     render() {
         const ingredientsOfBurger = Object.keys(this.props.ingredients).map(igKey => {
             return <li key={igKey}>{igKey}: <span style={{textTransform: "capitalize"}}>{this.props.ingredients[igKey]}</span></li>;

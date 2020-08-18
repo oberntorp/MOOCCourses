@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import Layout from './hoc/Layout/Layout';
-import Checkout from './containers/Checkout/Checkout';
-import Orders from './containers/Orders/Orders';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
-import Auth from './containers/Auth/Auth';
 import Logout from './containers/Auth/Logout/Logout';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions/index';
+
+const Auth = React.lazy(() => import('./containers/Auth/Auth'));
+const Orders = React.lazy(() => import('./containers/Orders/Orders'));
+const Checkout = React.lazy(() => import('./containers/Checkout/Checkout'));
 
 class App extends Component {
 
@@ -16,22 +17,27 @@ class App extends Component {
   }
   render(){
   let routes = (
+    <Suspense fallback={<div>Loading...</div>}>
     <Switch>
         <Route path="/auth" component={Auth} />
         <Route path="/" component={BurgerBuilder} />
         <Redirect to="/" />
         </Switch>
+        </Suspense>
   );
 
   if(this.props.isAuth){
     routes = (
+      <Suspense fallback={<div>Loading...</div>}>
       <Switch>
           <Route path="/checkout" component={Checkout} />
           <Route path="/orders" component={Orders} />
           <Route path="/logout" component={Logout} />
+          <Route path="/auth" component={Auth} />
           <Route path="/" component={BurgerBuilder} />
           <Redirect to="/" />
           </Switch>
+          </Suspense>
     );
   }
   return (

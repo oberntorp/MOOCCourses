@@ -7,6 +7,7 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 import Input from '../../../components/UI/Forms/Input/Input';
 import { connect } from 'react-redux';
 import * as orderAction from '../../../store/actions/index';
+import { updateObject, checkValidity } from '../../../shared/utility';
 
 class ContactData extends Component{
     state = {
@@ -22,7 +23,7 @@ class ContactData extends Component{
                         isRequired: true
                     },
                     isValid: false,
-                    touched: false
+                    isTouched: false
             },
             street: {
                 elementType: "input",
@@ -35,7 +36,7 @@ class ContactData extends Component{
                         isRequired: true
                     },
                     isValid: false,
-                    touched: false
+                    isTouched: false
 
                 },
             zipCode: {
@@ -52,7 +53,7 @@ class ContactData extends Component{
                         maxLength: 5
                     },
                     isValid: false,
-                    touched: false
+                    isTouched: false
                 },
                 country: {
                     elementType: "input",
@@ -65,8 +66,22 @@ class ContactData extends Component{
                             isRequired: true
                         },
                         isValid: false,
-                        touched: false
+                        isTouched: false
+                },
+                email: {
+                    elementType: 'input',
+                    elementConfiguration: {
+                        type: 'email',
+                        placeholder: 'Your Email'
                     },
+                    value: '',
+                    validationRules: {
+                        required: true,
+                        isEmail: true
+                    },
+                    isValid: false,
+                    isTouched: false
+                },
                 deliveryMethod: {
                     elementType: "select",
                     elementConfiguration: {
@@ -100,18 +115,14 @@ class ContactData extends Component{
     }
 
     changedValueHandler = (event, formElementId) => {
-        const updatedOrderForm = {
-            ...this.state.orderForm
-        }
 
-        const updatedFormElement = {
-            ...updatedOrderForm[formElementId]
-        }
+        const updatedFormElement = updateObject(this.state.orderForm[formElementId], {
+            value: event.target.value,
+            isValid: checkValidity(event.target.value.trim(), this.state.orderForm[formElementId].validationRules),
+            isTouched: true
+        });
 
-        updatedFormElement.value = event.target.value;
-        updatedFormElement.isValid = this.checkValidity(updatedFormElement.value.trim(), updatedFormElement.validationRules);
-        updatedFormElement.touched = true;
-        updatedOrderForm[formElementId] = updatedFormElement;
+        const updatedOrderForm = updateObject(this.state.orderForm, { [formElementId]: updatedFormElement });
 
         let isFormValid = true;
         for(let formElementIdentifier in updatedOrderForm){
@@ -121,29 +132,6 @@ class ContactData extends Component{
         }
 
         this.setState({orderForm: updatedOrderForm, isFormValid: isFormValid});
-    }
-
-    checkValidity(enteredValue, validationRules){
-        let isValid = true;
-        if(validationRules){
-            if(validationRules.isRequired){
-                isValid = enteredValue !== "" && isValid;
-            }
-    
-            if(validationRules.minLength){
-                isValid = enteredValue.length >= validationRules.minLength  && isValid;
-            }
-    
-            if(validationRules.maxLength){
-                isValid = enteredValue.length <= validationRules.maxLength && isValid;
-            }
-    
-            if(validationRules.isNumber){
-                isValid = !isNaN(enteredValue) && isValid;
-            }
-        }
-
-        return isValid;
     }
 
     render(){
@@ -164,7 +152,7 @@ class ContactData extends Component{
                 changed={(event) => this.changedValueHandler(event, formElement.id)}
                 isInvalid={!formElement.config.isValid}
                 shouldValidate={formElement.config.validationRules}
-                touched={formElement.config.touched} />)}
+                isTouched={formElement.config.isTouched} />)}
                 <Button btnType="Success" disabled={!this.state.isFormValid}>Order</Button>
             </form>
         );

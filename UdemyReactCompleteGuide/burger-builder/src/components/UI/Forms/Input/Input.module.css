@@ -24,7 +24,7 @@
     border: 1px solid black;
 }
 
-.Input input[type=text].IsInvalid, .Input input[type=email].IsInvalid, .Input textarea.IsInvalid{
+.Input input[type=text].IsInvalid, .Input input[type=email].IsInvalid, input[type=password].IsInvalid, .Input textarea.IsInvalid{
     border-bottom-width: 2px;
     border-bottom-color: red;
 }

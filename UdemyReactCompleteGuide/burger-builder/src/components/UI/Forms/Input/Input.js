@@ -3,7 +3,7 @@ import classes from './Input.module.css';
 
 const input = (props) => {
     let classList = [];
-    if(props.isInvalid && props.shouldValidate && props.touched){
+    if(props.isInvalid && props.shouldValidate && props.isTouched){
         classList.push(classes.IsInvalid);
     }
 
