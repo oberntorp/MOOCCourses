@@ -10,7 +10,8 @@ import * as burgerBuilderActions from '../../store/actions/index';
 import axios from '../../axios-config-orders';
 import { connect } from 'react-redux';
 
-class BurgerBuilder extends Component{
+// For testing the container needs a named export
+export class BurgerBuilder extends Component{
     state = {
         isPurchasing: false
     };
