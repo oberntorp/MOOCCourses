@@ -24,7 +24,8 @@ const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      {/* When deploying an app to a server, do not forget to set the basename attribute on BrowserRouter to the path that should work as the landing path e.i /my-app */}
+      <BrowserRouter basename="/react-burger-builder/">
         <App />
       </BrowserRouter>
     </Provider>

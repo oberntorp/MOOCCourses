@@ -42,7 +42,6 @@ class App extends Component {
   }
   return (
     <div>
-      {/* When deploying an app to a server, do not forget to set the basename attribute on BrowserRouter to the path that should work as the landing path e.i /my-app */}
       <Layout>
         {routes}
       </Layout>
