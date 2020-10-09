@@ -11,12 +11,20 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(OrderWeight("56 74 100"));
-            //Console.WriteLine(OrderWeight("56 65 74 100 99 68 86 180 90"));
-            //Console.WriteLine(OrderWeight("103 4 123 4444 99 2000"));
-            //Console.WriteLine(OrderWeight("4 103 310 33 6 24"));
-            Console.WriteLine(OrderWeight("2000 11 1003 11 9999 22 123"));
+            Console.WriteLine(OrderWeight("56 74 100")); // Ok output
+            Console.WriteLine(OrderWeight("56 65 74 100 99 68 86 180 90")); // Ej Ok
+            Console.WriteLine(OrderWeight("103 4 123 4444 99 2000")); // Ok output
+            Console.WriteLine(OrderWeight("4 103 310 33 6 24")); // Ok output
+            Console.WriteLine(OrderWeight("2000 11 1003 11 9999 22 123")); // Ej Ok
             Console.ReadKey();
+
+            /* Output from above:
+            100 56 74
+            180 90 100 74 56 65 86 68 99
+            2000 4 103 123 4444 99
+            4 103 310 6 24 33
+            11 11 2000 22 123 9999 1003
+            */
         }
 
         public static string OrderWeight(string strng)
