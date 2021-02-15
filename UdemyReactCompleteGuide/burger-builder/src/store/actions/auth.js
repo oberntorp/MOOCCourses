@@ -1,7 +1,4 @@
 import * as actionTypes from './actionTypes';
-import axios from 'axios';
-
-const FIREBASE_API_KEY = "AIzaSyBcYvd8BG6OFq48SG8yw317_2c0zfXs1_A";
 
 export const authStart = () =>{
     return{
@@ -25,57 +22,31 @@ export const authFail = (error) =>{
     };
 };
 
-const saveSessionData = (response) => {
-    localStorage.setItem("token", response.data.idToken);
-    localStorage.setItem("expirationDate", calculateExpirationDate(response));
-    localStorage.setItem("userId", response.data.localId);
-    return expiresInMiliSeconds;
+export const logoutSucced = () =>{
+    return {
+        type: actionTypes.AUTH_LOGOUT
+    };
 };
-const calculateExpirationDate = (response) => {
-    return new Date(new Date().getTime() + expiresInMiliSeconds(response));
-};
-
-const expiresInMiliSeconds = (response) => response.data.expiresIn * 1000;
 
 export const auth = (email, password, isSignUp) =>{
-    return dispatch => {
-        dispatch(authStart());
-        const authData = {
-            email: email,
-            password: password,
-            returnSecureToken: true
-        };
-
-        let url = (isSignUp) ? `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FIREBASE_API_KEY}`: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`;
-
-        axios.post(url, authData).then(response =>{
-            saveSessionData(response);
-            dispatch(authSuccess(response.data.idToken, response.data.localId));
-            dispatch(checkAuth(expiresInMiliSeconds(response)));
-        }).catch(error => {
-            dispatch(authFail(error));
-        });
+    return{
+        type: actionTypes.AUTH_USER,
+        email: email,
+        password: password,
+        isSignUp: isSignUp
     };
 };
 
-const checkAuth = (expirationTime) => {
-    return dispatch => {
-        setTimeout(() => {
-            dispatch(logout());
-        }, expirationTime);
+export const checkAuth = (expirationTime) => {
+    return {
+        type: actionTypes.AUTH_CHECK_TIMEOUT,
+        expirationTime: expirationTime
     };
-};
-
-const clearSession = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("expirationDate");
-    localStorage.removeItem("userId");
 };
 
 export const logout = () => {
-    clearSession();
     return {
-        type: actionTypes.AUTH_LOGOUT
+        type: actionTypes.AUTH_INITIATE_LOGOUT
     };
 };
 
