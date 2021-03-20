@@ -1,0 +1,14 @@
+main
+{
+    background-color: whitesmoke;
+}
+
+section, footer
+{
+    background-color: rgba(244, 244, 244, 0.3);
+}
+
+section
+{
+    margin-bottom: 5px;
+}
