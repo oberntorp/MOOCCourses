@@ -1,5 +1,4 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-config-orders';
 
 export const purchaseBurgerSuccess = (id, orderData) => {
     return{
@@ -17,12 +16,11 @@ export const purchaseBurgerFailed = (error) => {
 };
 
 export const purchaseBurger = (orderData, token) => {
-    return dispatch => {
-        dispatch(purchaseBurgerStart());
-        axios.post(`/orders.json?auth=${token}`, orderData).then(response => {
-            dispatch(purchaseBurgerSuccess(response.data.name, orderData));
-        }).catch(error => purchaseBurgerFailed(error));
-    };
+    return {
+        type: actionTypes.PURCHASE_BURGER,
+        orderData: orderData,
+        token: token
+    }
 };
 
 export const purchaseBurgerStart = () => {
@@ -52,33 +50,11 @@ export const fetchOrdersFailed = (error) => {
 };
 
 export const fetchOrders = (token, userId) => {
-    return dispatch => {
-        dispatch(fetchOrdersStart())
-        const queryParams = `?auth=${token}&orderBy="userId"&equalTo="${userId}"`;
-        axios.get(`/orders.json${queryParams}`).then(response => {
-            let orders = [];
-            for(let key in response.data){
-                orders.push({
-                    ...response.data[key],
-                    id: key
-                });
-            }
-
-            for (let order of orders) {
-                let transformedIngredients = [];
-                for (let ingredientName in order.ingredients) {
-                    transformedIngredients.push({
-                        name: ingredientName,
-                        amount: order.ingredients[ingredientName]
-                    });
-                }
-                order.ingredients = transformedIngredients;
-            }
-            dispatch(fetchOrdersSuccess(orders))
-        }).catch(error => {
-            dispatch(fetchOrdersFailed(error));
-        });
-    };
+    return {
+        type: actionTypes.FETCH_ORDERS,
+        token: token,
+        userId: userId
+    }
 };
 
 export const fetchOrdersStart = () => {
