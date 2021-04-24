@@ -8,10 +8,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BookLisrRazor.Pages.BookList
 {
-    public class CreateModel : PageModel
+    public class EditModel : PageModel
     {
-        private readonly ApplicationDbContext dbContext; 
-        public CreateModel(ApplicationDbContext db)
+        private ApplicationDbContext dbContext;
+
+        public EditModel(ApplicationDbContext db)
         {
             dbContext = db;
         }
@@ -19,23 +20,26 @@ namespace BookLisrRazor.Pages.BookList
         [BindProperty]
         public Book Book { get; set; }
 
-        public void OnGet()
+        public async Task OnGet(int id)
         {
-
+            Book = await dbContext.Book.FindAsync(id);
         }
 
         public async Task<IActionResult> OnPost()
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                await dbContext.Book.AddAsync(Book);
+                var BookFromDb = await dbContext.Book.FindAsync(Book.Id);
+                BookFromDb.Name = Book.Name;
+                BookFromDb.ISBN = Book.ISBN;
+                BookFromDb.Author = Book.Author;
+
                 await dbContext.SaveChangesAsync();
+
                 return RedirectToPage("Index");
             }
-            else
-            {
-                return Page();
-            }
+
+            return RedirectToPage();
         }
     }
 }
