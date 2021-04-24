@@ -388,3 +388,4 @@ D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BookLisrRa
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BookLisrRazor\obj\Debug\net5.0\ref\BookLisrRazor.dll
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BookLisrRazor\obj\Debug\net5.0\BookLisrRazor.pdb
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BookLisrRazor\obj\Debug\net5.0\BookLisrRazor.genruntimeconfig.cache
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BookLisrRazor\obj\Debug\net5.0\Razor\Pages\BookList\Upsert.cshtml.g.cs
