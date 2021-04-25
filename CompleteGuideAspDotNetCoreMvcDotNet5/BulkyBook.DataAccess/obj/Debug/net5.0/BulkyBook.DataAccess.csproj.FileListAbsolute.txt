@@ -10,3 +10,8 @@ D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.dll
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\ref\BulkyBook.DataAccess.dll
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.pdb
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\BulkyBook.Models.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\BulkyBook.Utility.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\BulkyBook.Models.pdb
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\BulkyBook.Utility.pdb
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.csproj.CopyComplete
