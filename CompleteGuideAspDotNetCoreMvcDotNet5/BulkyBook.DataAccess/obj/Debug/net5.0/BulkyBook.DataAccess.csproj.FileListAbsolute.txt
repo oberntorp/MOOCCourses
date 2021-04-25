@@ -1,0 +1,12 @@
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\BulkyBook.DataAccess.deps.json
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\BulkyBook.DataAccess.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\ref\BulkyBook.DataAccess.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\bin\Debug\net5.0\BulkyBook.DataAccess.pdb
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.csprojAssemblyReference.cache
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.AssemblyInfoInputs.cache
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.AssemblyInfo.cs
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.csproj.CoreCompileInputs.cache
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\ref\BulkyBook.DataAccess.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.DataAccess\obj\Debug\net5.0\BulkyBook.DataAccess.pdb
