@@ -446,3 +446,4 @@ D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Customer\Views\_ViewStart.cshtml.g.cs
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\bin\Debug\net5.0\Dapper.dll
