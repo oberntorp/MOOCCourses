@@ -447,3 +447,7 @@ D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\bin\Debug\net5.0\Dapper.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Upsert.cshtml.g.cs
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Views\Shared\_CreateAndBackToListButton.cshtml.g.cs
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
