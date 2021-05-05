@@ -15,11 +15,14 @@ namespace BulkyBook.DataAccess.Data.Repository
         {
             dbContext = db;
             Category = new CategoryRepository(dbContext);
+            CoverType = new CoverTypeRepository(dbContext);
             SP_Call = new SP_Call(dbContext);
         }
 
         public ICategoryRepository Category { get; private set; }
         public ISP_Call SP_Call { get; private set; }
+
+        public CoverTypeRepository CoverType { get; private set; }
 
         public void Dispose()
         {
