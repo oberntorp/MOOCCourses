@@ -910,3 +910,4 @@ C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDo
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\ref\BulkyBook.dll
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\BulkyBook.pdb
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\BulkyBook.genruntimeconfig.cache
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs

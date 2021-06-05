@@ -100,7 +100,7 @@ namespace BulkyBook.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = unitOfWork.Category.GetAll(includeProperties: "Category, CoverType");
+            var allObj = unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
             return Json(new { data = allObj });
         }
     }
