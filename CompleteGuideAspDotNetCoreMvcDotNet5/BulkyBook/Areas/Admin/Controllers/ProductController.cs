@@ -1,11 +1,14 @@
 ﻿using BulkyBook.DataAccess.Data;
 using BulkyBook.DataAccess.Data.Repository.IRepository;
 using BulkyBook.Models;
+using BulkyBook.Models.ViewModels;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BulkyBook.Areas.Admin.Controllers
 {
@@ -13,10 +16,12 @@ namespace BulkyBook.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
+        private readonly IWebHostEnvironment hostingEnvironment;
 
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostingEnvironment)
         {
             this.unitOfWork = unitOfWork;
+            this.hostingEnvironment = hostingEnvironment;
         }
 
         public IActionResult Index()
@@ -26,49 +31,62 @@ namespace BulkyBook.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Category category = new Category();
-
-            if(id == null)
+            ProductViewModel productViewModel = new ProductViewModel()
             {
-                return View(category);
+                Product = new Product(),
+                CategoryList = unitOfWork.Category.GetAll().Select(i => new SelectListItem() { 
+                Text = i.Name,
+                Value = i.Id.ToString()
+                }),
+                CoverTypeList = unitOfWork.CoverType.GetAll().Select(i => new SelectListItem()
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+
+            };
+
+            if (id == null)
+            {
+                return View(productViewModel);
             }
 
-            category = unitOfWork.Category.Get(id.GetValueOrDefault());
+            productViewModel.Product = unitOfWork.Product.Get(id.GetValueOrDefault());
 
-            if(category == null)
+            if (productViewModel.Product == null)
             {
                 return NotFound();
             }
-            return View(category);
+            return View(productViewModel);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Category category)
-        {
-            if(ModelState.IsValid)
-            {
-                if(category.Id == 0)
-                {
-                    unitOfWork.Category.Add(category);
-                }
-                else
-                {
-                    unitOfWork.Category.Update(category);
-                }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Upsert(Category category)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        if (category.Id == 0)
+        //        {
+        //            unitOfWork.Category.Add(category);
+        //        }
+        //        else
+        //        {
+        //            unitOfWork.Category.Update(category);
+        //        }
 
-                unitOfWork.Save();
-                return RedirectToAction(nameof(Index));
-            }
+        //        unitOfWork.Save();
+        //        return RedirectToAction(nameof(Index));
+        //    }
 
-            return View(category);
-        }
+        //    return View(category);
+        //}
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
             var objFromDb = unitOfWork.Category.Get(id);
-            if(objFromDb == null)
+            if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Error whille deleting" });
             }
@@ -82,7 +100,7 @@ namespace BulkyBook.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = unitOfWork.Category.GetAll();
+            var allObj = unitOfWork.Category.GetAll(includeProperties: "Category, CoverType");
             return Json(new { data = allObj });
         }
     }

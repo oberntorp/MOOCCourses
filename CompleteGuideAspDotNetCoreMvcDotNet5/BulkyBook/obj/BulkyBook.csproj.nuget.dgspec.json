@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj": {}
+    "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj": {}
   },
   "projects": {
-    "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+    "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
         "projectName": "BulkyBook.DataAccess",
-        "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
         "packagesPath": "C:\\Users\\obern\\.nuget\\packages\\",
-        "outputPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\obern\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-                "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj"
               },
-              "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
-                "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
+              "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
               }
             }
           }
@@ -83,25 +79,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+    "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectUniqueName": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "projectName": "BulkyBook.Models",
-        "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "packagesPath": "C:\\Users\\obern\\.nuget\\packages\\",
-        "outputPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\obj\\",
+        "outputPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\obern\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,6 +118,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -141,25 +139,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+    "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectUniqueName": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "projectName": "BulkyBook.Utility",
-        "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "packagesPath": "C:\\Users\\obern\\.nuget\\packages\\",
-        "outputPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\obj\\",
+        "outputPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\obern\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -199,25 +193,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj": {
+    "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj",
+        "projectUniqueName": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj",
         "projectName": "BulkyBook",
-        "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj",
+        "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj",
         "packagesPath": "C:\\Users\\obern\\.nuget\\packages\\",
-        "outputPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\obj\\",
+        "outputPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\obern\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -231,14 +221,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
-                "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
+              "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
               },
-              "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-                "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Models\\BulkyBook.Models.csproj"
               },
-              "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
-                "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
+              "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
               }
             }
           }
@@ -300,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
