@@ -10,3 +10,15 @@ D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\ref\BulkyBook.Utility.dll
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.pdb
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.csprojAssemblyReference.cache
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\bin\Debug\net5.0\BulkyBook.Utility.deps.json
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\bin\Debug\net5.0\BulkyBook.Utility.dll
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\bin\Debug\net5.0\ref\BulkyBook.Utility.dll
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\bin\Debug\net5.0\BulkyBook.Utility.pdb
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.csproj.AssemblyReference.cache
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.AssemblyInfoInputs.cache
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.AssemblyInfo.cs
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.csproj.CoreCompileInputs.cache
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.dll
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\ref\BulkyBook.Utility.dll
+C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Utility\obj\Debug\net5.0\BulkyBook.Utility.pdb
