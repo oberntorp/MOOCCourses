@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.IO;
 
 namespace BulkyBook.Areas.Admin.Controllers
 {
@@ -42,7 +43,7 @@ namespace BulkyBook.Areas.Admin.Controllers
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
-                }),
+                }) 
 
             };
 
@@ -60,27 +61,61 @@ namespace BulkyBook.Areas.Admin.Controllers
             return View(productViewModel);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Upsert(Category category)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        if (category.Id == 0)
-        //        {
-        //            unitOfWork.Category.Add(category);
-        //        }
-        //        else
-        //        {
-        //            unitOfWork.Category.Update(category);
-        //        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(ProductViewModel productVM)
+        {
+            if (ModelState.IsValid)
+            {
+                string webRoot = hostingEnvironment.WebRootPath;
+                var files = HttpContext.Request.Form.Files;
 
-        //        unitOfWork.Save();
-        //        return RedirectToAction(nameof(Index));
-        //    }
+                if(files.Count > 0)
+                {
+                    string fileNameWithOutExt = Guid.NewGuid().ToString();
+                    var uploads = Path.Combine(webRoot, @"images\products");
+                    var extention = Path.GetExtension(files[0].FileName);
 
-        //    return View(category);
-        //}
+                    if(productVM.Product.ImageUrl != null)
+                    {
+                        // edit, remove old image
+                        var imagePath = Path.Combine(webRoot, productVM.Product.ImageUrl.TrimStart('\\'));
+                        if(System.IO.File.Exists(imagePath))
+                        {
+                            System.IO.File.Delete(imagePath);
+                        }
+                    }
+                    string fileNameWithExt = $"{fileNameWithOutExt}{extention}";
+                    using (var fileStreams = new FileStream(Path.Combine(uploads, fileNameWithExt), FileMode.Create))
+                    {
+                        files[0].CopyTo(fileStreams);
+                    }
+                    productVM.Product.ImageUrl = @"\images\products\"+fileNameWithExt;
+                }
+                else
+                {
+                    // update without image being changed
+                    if(productVM.Product.Id != 0)
+                    {
+                        Product objFromDb = unitOfWork.Product.Get(productVM.Product.Id);
+                        productVM.Product.ImageUrl = objFromDb.ImageUrl;
+                    }
+                }
+                if (productVM.Product.Id == 0)
+                    {
+                        unitOfWork.Product.Add(productVM.Product);
+                    }
+                    else
+                    {
+                        unitOfWork.Product.Update(productVM.Product);
+                    }
+
+                unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(productVM);
+        }
 
         [HttpDelete]
         public IActionResult Delete(int id)

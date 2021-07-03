@@ -9,7 +9,6 @@ D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\BulkyBook.Models.dll
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\ref\BulkyBook.Models.dll
 D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\BulkyBook.Models.pdb
-D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\BulkyBook.Models.csprojAssemblyReference.cache
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\bin\Debug\net5.0\BulkyBook.Models.deps.json
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\bin\Debug\net5.0\BulkyBook.Models.dll
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\bin\Debug\net5.0\ref\BulkyBook.Models.dll
@@ -22,3 +21,4 @@ C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDo
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\BulkyBook.Models.dll
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\ref\BulkyBook.Models.dll
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\BulkyBook.Models.pdb
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook.Models\obj\Debug\net5.0\BulkyBook.Models.csproj.AssemblyReference.cache
