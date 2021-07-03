@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+iuxWLHggC6dU5N4xyaCIMsthOixjaH9znqGBxIq2U6LO04iP70Pj3pknQdZrQzmJWfTh2RBtPK0ieXc/Z7/2w==",
+  "dgSpecHash": "rOMLvYtJM3ZGFWzdQ8gdrnE01cv079l3BWDC7fmSgOQBdjVcUtx1LeIaUNBw2XLH/q+b1aa+Snc67L5xDNf5dA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj",
+  "projectFilePath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook\\BulkyBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\obern\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\obern\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -8,19 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\obern\\.nuget\\packages\\": {}
+    "C:\\Users\\obern\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+      "projectUniqueName": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
       "projectName": "BulkyBook.Utility",
-      "projectPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+      "projectPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
       "packagesPath": "C:\\Users\\obern\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\obern\\OneDrive\\Dokument\\git\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\obj\\",
+      "outputPath": "D:\\wamp64\\www\\GitHub\\MOOCCourses\\CompleteGuideAspDotNetCoreMvcDotNet5\\BulkyBook.Utility\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\obern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

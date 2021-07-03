@@ -911,3 +911,7 @@ C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDo
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\BulkyBook.pdb
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\BulkyBook.genruntimeconfig.cache
 C:\Users\obern\OneDrive\Dokument\git\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+D:\wamp64\www\GitHub\MOOCCourses\CompleteGuideAspDotNetCoreMvcDotNet5\BulkyBook\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Upsert.cshtml.g.cs
