@@ -44,7 +44,6 @@ namespace BulkyBook.Areas.Admin.Controllers
                     Text = i.Name,
                     Value = i.Id.ToString()
                 }) 
-
             };
 
             if (id == null)
@@ -113,20 +112,42 @@ namespace BulkyBook.Areas.Admin.Controllers
                 unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-
+            else
+            {
+                productVM.CategoryList = unitOfWork.Category.GetAll().Select(i => new SelectListItem()
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+                productVM.CoverTypeList = unitOfWork.CoverType.GetAll().Select(i => new SelectListItem()
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+                if(productVM.Product.Id != 0)
+                {
+                    productVM.Product = unitOfWork.Product.Get(productVM.Product.Id);
+                }
+            }
             return View(productVM);
         }
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var objFromDb = unitOfWork.Category.Get(id);
+            var objFromDb = unitOfWork.Product.Get(id);
             if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Error whille deleting" });
             }
 
-            unitOfWork.Category.Remove(objFromDb);
+            string webRoot = hostingEnvironment.WebRootPath;
+            var imagePath = Path.Combine(webRoot, objFromDb.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(imagePath))
+            {
+                System.IO.File.Delete(imagePath);
+            }
+            unitOfWork.Product.Remove(objFromDb);
             unitOfWork.Save();
             return Json(new { success = true, message = "Delete successfull" });
 
