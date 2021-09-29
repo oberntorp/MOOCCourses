@@ -22,6 +22,7 @@ function getMovieData(movieTitle) {
 }
 
 const getCast = (movie) => {
+    console.log(movie);
     return new Promise((resolve, reject) => {
         $.ajax({
             url: `${castUrl}/${movie.id}/credits?api_key=${apiKey}`,
@@ -34,6 +35,7 @@ const getCast = (movie) => {
 }
 
 const getPerson = (person) => {
+    console.log(person);
     return new Promise((resolve, reject) => {
         $.ajax({
             url: `${peopleUrl}/${person.id}?api_key=${apiKey}`,
@@ -48,12 +50,12 @@ const getPerson = (person) => {
 document.querySelector("#movie-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const movieTitleInputs = Array.from(document.querySelectorAll(".movie-title"));
-    const moviePromise = getMovieData(movieTitleInputs[0].value);
+    const moviePromises = movieTitleInputs.map((m) => getMovieData(m.value).then((castInfo) => {
+        return getPerson(castInfo[0]);
+    }).then((personInfo) => console.log(`PersonInfo of ${m.value}`,personInfo)));
 
-    moviePromise.then((movieData) => {
-        return getCast(movieData[0]);
-    }).then((castInfo) => {
-        return getPerson(castInfo);
-    }).then((personInfo) => console.log(personInfo));
+    Promise.all(moviePromises).then((movieData) => {
+        console.log(movieData);
+    })
 
 })
