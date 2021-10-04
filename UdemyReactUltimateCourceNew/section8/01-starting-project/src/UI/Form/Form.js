@@ -17,7 +17,7 @@ const Form = (props) => {
       props.sendError(error);
       return;
     }
-    if (+age.trim() > 1) {
+    if (+age.trim() < 1) {
       setError({
         title: "Invalid age",
         message: "Please enter a valid age, > 1",
