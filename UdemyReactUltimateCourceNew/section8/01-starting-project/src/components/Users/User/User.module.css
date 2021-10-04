@@ -1,0 +1,13 @@
+.User {
+  background-color: white;
+  box-shadow: 0px 0px 3px 0px #ccc;
+}
+
+.UserName,
+.Age {
+  font-weight: bold;
+}
+
+.User span {
+  margin-right: 5px;
+}
