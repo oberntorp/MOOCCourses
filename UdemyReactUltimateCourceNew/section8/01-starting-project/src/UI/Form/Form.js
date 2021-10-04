@@ -9,7 +9,7 @@ const Form = (props) => {
   const onSubmitHandler = (event) => {
     event.preventDefault();
     setError(null);
-    if (username.trim().length === 0 && age.trim().length === 0) {
+    if (username.trim().length === 0 || age.trim().length === 0) {
       setError({
         title: "Invalid input",
         message: "Please enter username and age",
