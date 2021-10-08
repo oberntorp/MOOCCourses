@@ -19,7 +19,7 @@ const MealItemForm = (props) => {
     const amountAsNumber = Number(amountInputRef.current.value);
     if (
       amountInputRef.current.value.trim().length === 0 ||
-      amountAsNumber < 0 ||
+      amountAsNumber < 1 ||
       amountAsNumber > 5
     ) {
       setAmountIsValid(false);
