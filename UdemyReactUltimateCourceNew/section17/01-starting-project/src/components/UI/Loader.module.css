@@ -1,0 +1,18 @@
+.Loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ccc;
+  border-top: 3px solid red;
+  animation: spinn 2s ease-in-out 2s infinite;
+  border-radius: 50px;
+  margin: 0px auto;
+}
+
+@keyframes spinn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
