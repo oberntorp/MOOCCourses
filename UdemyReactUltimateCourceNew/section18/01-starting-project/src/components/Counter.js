@@ -1,31 +1,28 @@
 import { useSelector, useDispatch } from "react-redux";
-import { counterActions } from "../store/slices/counter";
+import * as actions from "../store/actions/index";
 import classes from "./Counter.module.css";
 
 const Counter = () => {
-  const counter = useSelector((state) => state.counter.counter);
-  const showCounter = useSelector((state) => state.counter.showCounter);
+  const counter = useSelector((state) => state.counter);
   const dispatch = useDispatch();
-  const toggleCounterHandler = () => {
-    dispatch(counterActions.showCounter());
-  };
+  const toggleCounterHandler = () => {};
 
   const incrementCounterHandler = () => {
-    dispatch(counterActions.increment());
+    dispatch({ type: actions.INCREMENT });
   };
 
   const increaseHandler = (amountToIncreaseBy) => {
-    dispatch(counterActions.increase(amountToIncreaseBy)); //<-- Anything sent to the action arrives as a property named payload underneath actions
+    dispatch({ type: actions.INCREASE, amount: amountToIncreaseBy });
   };
 
   const decrementCounterHandler = () => {
-    dispatch(counterActions.decrement());
+    dispatch({ type: actions.DECREMENT });
   };
 
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
-      {showCounter && <div className={classes.value}>{counter}</div>}
+      <div className={classes.value}>{counter}</div>
       <div>
         <button onClick={incrementCounterHandler}>Increment</button>
         <button onClick={increaseHandler.bind(null, 20)}>Increase by 20</button>
