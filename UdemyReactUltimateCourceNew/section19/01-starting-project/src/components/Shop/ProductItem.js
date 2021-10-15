@@ -1,9 +1,12 @@
-import Card from '../UI/Card';
-import classes from './ProductItem.module.css';
+import Card from "../UI/Card";
+import classes from "./ProductItem.module.css";
 
 const ProductItem = (props) => {
   const { title, price, description } = props;
 
+  const addProductToCart = () => {
+    props.onAdd({ item: { title, price, description } });
+  };
   return (
     <li className={classes.item}>
       <Card>
@@ -13,7 +16,7 @@ const ProductItem = (props) => {
         </header>
         <p>{description}</p>
         <div className={classes.actions}>
-          <button>Add to Cart</button>
+          <button onClick={addProductToCart}>Add to Cart</button>
         </div>
       </Card>
     </li>
