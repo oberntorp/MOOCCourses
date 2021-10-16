@@ -4,7 +4,7 @@ import { toggle } from "../../store/index";
 
 const CartButton = (props) => {
   const dispatch = useDispatch();
-  const totalQuantity = useSelector((state) => state.totalQuantity);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const toggleCart = () => {
     dispatch(toggle());
   };

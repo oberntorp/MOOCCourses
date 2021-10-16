@@ -21,7 +21,7 @@ const Products = (props) => {
   const dispatch = useDispatch();
 
   const addToCartHandler = (item) => {
-    dispatch(addProduct({ item: item }));
+    dispatch(addProduct(item));
   };
   return (
     <section className={classes.products}>
