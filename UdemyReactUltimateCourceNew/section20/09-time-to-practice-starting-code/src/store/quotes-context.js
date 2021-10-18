@@ -16,7 +16,9 @@ export const QuotesContextProvider = (props) => {
   ]);
   const addQuoteHandler = (quote) => {
     setQuotes((prevState) => {
-      return prevState.push(quote);
+      const updatedquotesList = [...prevState];
+      updatedquotesList.push(quote);
+      return updatedquotesList;
     });
   };
   return (
