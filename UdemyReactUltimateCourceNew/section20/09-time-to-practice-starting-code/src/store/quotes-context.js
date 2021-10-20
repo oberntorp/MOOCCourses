@@ -9,7 +9,7 @@ const QuotesContext = React.createContext(initialContext);
 export const QuotesContextProvider = (props) => {
   const [quotes, setQuotes] = useState([
     {
-      id: `q${Math.random()}`,
+      id: `q${(Math.random() * 10).toFixed()}`,
       author: "Oskar Berntorp",
       text: "My Quote",
     },
