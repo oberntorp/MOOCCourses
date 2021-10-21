@@ -33,6 +33,9 @@ const Comments = () => {
 
   let comments;
 
+  if (error) {
+    comments = <p className="centered">{error}</p>;
+  }
   if (status === "pending") {
     comments = (
       <div className="centered">

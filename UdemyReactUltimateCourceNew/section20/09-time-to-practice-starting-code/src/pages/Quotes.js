@@ -1,12 +1,12 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import QuoteList from "../components/quotes/QuoteList";
-import QuotesContext from "../store/quotes-context";
+// import QuotesContext from "../store/quotes-context";
 import useHttp from "../hooks/use-http";
 import { getAllQuotes } from "../lib/api";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 import NoQuotesFound from "../components/quotes/NoQuotesFound";
 const Quotes = (props) => {
-  const context = useContext(QuotesContext);
+  // const context = useContext(QuotesContext);
   const {
     sendRequest,
     status,

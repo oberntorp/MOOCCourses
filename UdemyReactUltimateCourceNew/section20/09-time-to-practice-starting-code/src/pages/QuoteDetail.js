@@ -1,16 +1,16 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { Route, useParams, Link, useRouteMatch } from "react-router-dom";
 import HighligtedQuote from "../components/quotes/HighlightedQuote";
 import Comments from "../components/comments/Comments";
-import QuotesContext from "../store/quotes-context";
+// import QuotesContext from "../store/quotes-context";
 import useHttp from "../hooks/use-http";
 import { getSingleQuote } from "../lib/api";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 
 const QuoteDetail = () => {
-  const context = useContext(QuotesContext);
+  // const context = useContext(QuotesContext);
   const params = useParams();
-  const quote = context.quotesList.find((q) => q.id === params.quoteId);
+  // const quote = context.quotesList.find((q) => q.id === params.quoteId);
   const match = useRouteMatch();
   const { quoteId } = params;
   const {
