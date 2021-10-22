@@ -58,7 +58,7 @@ export const AuthContextProvider = (props) => {
     if (timeout) {
       clearTimeout(timeout);
     }
-  });
+  }, []);
 
   useEffect(() => {
     if (tokenData) {
