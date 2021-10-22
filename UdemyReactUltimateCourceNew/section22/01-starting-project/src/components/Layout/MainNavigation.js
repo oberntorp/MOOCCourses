@@ -6,6 +6,10 @@ import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   const authContext = useContext(AuthContext);
+
+  const logoutHandler = () => {
+    authContext.logout();
+  };
   return (
     <header className={classes.header}>
       <Link to="/">
@@ -25,7 +29,7 @@ const MainNavigation = () => {
           )}
           {authContext.isLoggedIn && (
             <li>
-              <button>Logout</button>
+              <button onClick={logoutHandler}>Logout</button>
             </li>
           )}
         </ul>

@@ -1,9 +1,11 @@
 import { useContext, useRef, useState } from "react";
-import AuthContext from "../store/auth-context";
+import { useHistory } from "react-router";
+import AuthContext, { fireBaseApiKey } from "../store/auth-context";
 
 import classes from "./AuthForm.module.css";
 
 const AuthForm = () => {
+  const history = useHistory();
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const emailInputRef = useRef();
@@ -23,11 +25,9 @@ const AuthForm = () => {
 
     let url;
     if (isLogin) {
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBgt1ZThfuT6kGeSvi4gFX6Mjvem6up8FI";
+      url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${fireBaseApiKey}`;
     } else {
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBgt1ZThfuT6kGeSvi4gFX6Mjvem6up8FI";
+      url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${fireBaseApiKey}`;
     }
 
     fetch(url, {
@@ -42,7 +42,6 @@ const AuthForm = () => {
       .then((response) => {
         setIsLoading(false);
         if (response.ok) {
-          console.log("Success", response);
           return response.json();
         } else {
           return response.json().then((response) => {
@@ -55,7 +54,8 @@ const AuthForm = () => {
         }
       })
       .then((data) => {
-        authContext.login(data.idToken);
+        authContext.login(data.idToken, data.expiresIn);
+        history.replace("/");
       })
       .catch((error) => alert(error.message));
   };
