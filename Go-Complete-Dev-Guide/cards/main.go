@@ -5,11 +5,16 @@ func main() {
 
 	// card can also be defined, the := operator is only used when a variable is first declared and it tells go to infer the type based on the assigned value (string in this case)
 	//card := "Ace of Spades"
-	cards := deck{"Ace od Diamonds", newCard()}
-	cards = append(cards, "Six of Spades")
-	cards.print()
-}
+	// cards := newDeck()
+	// hand, remainingCards := deal(cards, 3)
+	// hand.print()
+	// remainingCards.print()
 
-func newCard() string {
-	return "Five of diamonds"
+	// greeting := "Hi There!"
+
+	// fmt.Println([]byte(greeting))
+
+	cards := newDckFromFile("my_cards.txt")
+	cards.shuffle()
+	cards.print()
 }
