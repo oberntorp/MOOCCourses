@@ -14,7 +14,7 @@ func main() {
 
 	// fmt.Println([]byte(greeting))
 
-	cards := newDckFromFile("my_cards.txt")
+	cards := newDeckFromFile("my_cards.txt")
 	cards.shuffle()
 	cards.print()
 }

@@ -44,7 +44,7 @@ func (d deck) saveToFile(fileName string) error{
 	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
 }
 
-func newDckFromFile(fileName string) deck{
+func newDeckFromFile(fileName string) deck{
 	bs, err := ioutil.ReadFile(fileName)
 	if err != nil{
 		fmt.Println("Error", err)
@@ -57,8 +57,8 @@ func newDckFromFile(fileName string) deck{
 }
 
 func (d deck) shuffle(){
-	sourse:=rand.NewSource(time.Now().UnixNano())
-	r := rand.New(sourse)
+	source:=rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
 	for i := range d{
 		newPosition := r.Intn(len(d)-1)
 
