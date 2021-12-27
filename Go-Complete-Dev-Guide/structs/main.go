@@ -28,7 +28,7 @@ func main() {
 	// The fird way is to first declare the variable and not assign any values, the properties of the struct would be assigned it´s zero values (default values)
 	// var alex person
 
-	// If the struct has been declared in the above way, it is assigned values like this, which is also the way of updating an already defined struct
+	// If the struct has been declared in the above way, it is assigned values like this, which is also the way of updating an already defined struct or accessing the properties
 
 	// alex.firstName = "Alex"
 	// alex.lastName = "Andersson"
