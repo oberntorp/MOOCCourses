@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type bot interface{
+type bot interface {
 	getGreeting() string
 }
 type englishBot struct{}

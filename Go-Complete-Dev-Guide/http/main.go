@@ -10,9 +10,9 @@ import (
 type logWriter struct{}
 
 func main() {
-	resp , err := http.Get("http://googl.com")
-	
-	if err != nil{
+	resp, err := http.Get("http://googl.com")
+
+	if err != nil {
 		fmt.Println("Error", err)
 		os.Exit(1)
 	}
@@ -30,7 +30,7 @@ func main() {
 	io.Copy(lw, resp.Body)
 }
 
-func (logWriter) Write(bs []byte) (int, error){
+func (logWriter) Write(bs []byte) (int, error) {
 	fmt.Println(string(bs))
 	fmt.Println("Just wrote this many bytes", len(bs))
 	return len(bs), nil

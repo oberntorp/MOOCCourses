@@ -8,8 +8,8 @@ type contactInfo struct {
 }
 
 type person struct {
-	firstName string
-	lastName  string
+	firstName   string
+	lastName    string
 	contactInfo // <- If i want, a struct can also be embedded by simply only adding the type (contact info in this case), it is equivalent to writing contactInfo contactInfo
 	// contactInfo contactInfo
 	// contact: contactIcontactInfo
@@ -42,21 +42,20 @@ func main() {
 
 	// A struct with an embedded struct is defined like this
 
-	jim := person{firstName: "Jim", lastName: "Party", contactInfo:  contactInfo{enail: "jim@gmail.com", zipCode: 94000}}
- 
+	jim := person{firstName: "Jim", lastName: "Party", contactInfo: contactInfo{enail: "jim@gmail.com", zipCode: 94000}}
+
 	// A pointer is defined like this (pointer to jim)
 	jimPointer := &jim
 	jimPointer.updateName("Jimmy")
 	jim.print()
-	
 
 }
 
 // The receuver function works on the pointer
-func (pointerToPerson *person) updateName(newFirstName string){
+func (pointerToPerson *person) updateName(newFirstName string) {
 	(*pointerToPerson).firstName = newFirstName
 }
 
-func (p person) print(){
+func (p person) print() {
 	fmt.Printf("%+v", p)
 }
