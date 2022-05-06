@@ -17,6 +17,15 @@ p {
 section#sailboats {
   position: fixed;
 }
+
+section#seagul {
+  position: fixed;
+}
+
+section#seagul img {
+  z-index: 10;
+}
+
 section.text {
   position: absolute;
   width: 100%;
@@ -35,7 +44,7 @@ section img {
   pointer-events: none;
 }
 
-section img#sailboat {
+section#sailboat img {
   z-index: 10;
 }
 
