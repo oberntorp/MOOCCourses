@@ -1,0 +1,48 @@
+Get-Service
+Get-Service -Name 'spooler'
+Stop-Service -Name 'spooler'
+Start-Service -Name 'spooler'
+Get-Service -Name 'spooler'
+Stop-Service -Name 'spooler'
+Get-Service -Name 'spooler'
+Start-Service -Name 'spooler'
+Get-Service -Name 'spooler'
+Get-Help -Name SetLocalUser
+Get-Help -Name Get-Service
+Get-Help -Name Get-LocalUser
+Get-Help -Name Get-Service
+Get-Help -Name Get-Service -Examples
+Update-Help
+Get-Help -Name Get-Service
+Get-Help -Name Get-Service -Examples
+Get-Item 'C:\source\1.txt' | Copy-Item -Destination 'C:\target\'
+Get-Item 'C:\target\'
+Get-ChildItem 'C:\source\' | Copy-Item -Destination 'C:\target\'
+Get-ChildItem 'C:\target\'
+Get-Alias
+Get-Alias | Out-File -FilePath 'C:\outfile\out.txt'
+Get-Service -Name 'Spooler' | Stop-Service
+Get-Service -Name 'Spooler'
+Get-Service -Name 'Spooler' | Stop-Service
+Get-Service -Name 'Spooler'
+Get-Command
+cls
+Get-Help -Name 'Get-Disk'
+Get-Disk
+Get-Volume
+Get-Volume -DriveLetter 'C'
+New-LocalUser 'MyTestUser' -Description 'A test user created with powershell'
+Get-LocalUser
+Remove-LocalUser -Name 'MyTestUser'
+Get-LocalUser
+cd 'C:\wamp64\www\GitHub\'
+ls
+git clone https://github.com/oberntorp/MOOCCourses.git
+cd .\MOOCCourses\
+
+Get-History | Out-File -FilePath 'C:\outfile\.HistoryPS.txt'
+git config --system core.longpaths true
+Get-ChildItem 'C:\outfile\' | Move-Item -Destination .\MOOCCourses\PowerShell
+Get-History
+Get-Service | Out-File -FilePath 'C:\outfile\services.txt'
+(Get-PSReadlineOption).HistorySavePath
