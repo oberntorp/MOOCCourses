@@ -1,0 +1,1 @@
+C:\wamp64\www\GitHub\WinUI3\MyFirstApp\MyFirstApp\MyFirstApp.csproj;x86
