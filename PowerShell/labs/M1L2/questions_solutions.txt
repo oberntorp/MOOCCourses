@@ -1,0 +1,26 @@
+1.	Show all services that are running on your screen.
+2.	Display the spooler service on your screen with the Where-Object cmdlet.
+3.	Show the properties and methods of the Get-Service Cmdlet.
+4.	Create 2 new local users named Bobby and Sandra with PowerShell in your computer. If your name happens to be Bobby or Sandra please pick another name😊. This can be tricky. If you don’t succeed. Please create the two accounts manually.
+5.	Now your boss wants you to show all enabled accounts on your machine. Think of which Cmdlets you need . 
+6.	Now your boss wants you to do the same as in assignment 5, but he wants those enabled accounts outputted to a .txt file.
+7.	Same as 5 again, but now to a basic CSV file.
+8.	The same as 7 but he only needs the Name,Enabled and description properties.
+
+
+
+1: Get-Service | Where-Object {$PSItem.status -eq 'running'}
+
+2: Get-Service | Where-Object {$PSItem.Name -eq 'spooler'}
+
+3: Get-Service | Get-Member
+
+4: New-LocalUser -Name 'Bobby' -NoPassword, New-LocalUser -Name 'Sandra' -NoPassword
+
+5: Get-LocalUser | Enable-LocalUser
+
+6: Get-LocalUser | Where-Object {$PSItem.enabled -eq $true} | Out-File -FilePath 'C:\wamp64\www\GitHub\MOOCCourses\PowerShell\ExportCSVGetService\AnabledUsers.txt'
+
+7: Get-LocalUser | Where-Object {$PSItem.enabled -eq $true} | Export-Csv -Path 'C:\wamp64\www\GitHub\MOOCCourses\PowerShell\ExportCSVGetService\EnabledUsers.csv'
+
+8: Get-LocalUser | Where-Object {$PSItem.enabled -eq $true} | Select-Object -Property Name,Enabled,Description | Export-Csv -Path 'C:\wamp64\www\GitHub\MOOCCourses\PowerShell\ExportCSVGetService\EnabledUsers.csv'

@@ -1,0 +1,9 @@
+#TYPE Selected.Microsoft.PowerShell.Commands.LocalUser
+"Name","Enabled","Description"
+"Administrat?r","True","F?rdefinierat administrat?rskonto f?r datorn/dom?nen"
+"Bobby","True",""
+"DefaultAccount","True","Ett anv?ndarkonto som hanteras av systemet."
+"G?st","True","F?rdefinierat g?stkonto f?r datorn/dom?nen"
+"obern","True",""
+"Sandra","True",""
+"WDAGUtilityAccount","True","Ett anv?ndarkonto som hanteras av systemet f?r Windows Defender Application Guard-scenarion"

@@ -1,0 +1,8 @@
+1.	Now your boss wants you to show all enabled accounts on your machine and change the description property in ‘Enabled account’
+2.	Everybody with the description property with the value of ‘Enabled Account’ should be shown on the screen.
+3.	Same as 2 but now to a .txt file.
+
+
+1: Get-LocalUser | Where-Object {$PSItem.enabled -eq $true} | Set-LocalUser -Description 'Enabled account'
+2: Get-LocalUser | Where-Object {$PSItem.Description -eq 'Enabled account'}
+3: Get-LocalUser | Where-Object {$PSItem.Description -eq 'Enabled account'} | Out-File -FilePath C:\wamp64\www\GitHub\MOOCCourses\PowerShell\labs\M1L3\outfile.txt
