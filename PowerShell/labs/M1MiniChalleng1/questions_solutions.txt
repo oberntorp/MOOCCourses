@@ -1,0 +1,51 @@
+1.	You are asked to create a directory with PowerShell named. ‘C:\mydir’
+
+2.	Now you have to create two text files in there with PowerShell named 1.txt and 2.txt. These can be empty.
+
+3.	Now you have to create two .jpg files in there with PowerShell named 1.jpg and 2.jpg. Doesn’t have to be an actual picture.
+
+4.	Remove all the files 1.txt,2.txt,1.jpg and 2.jpg in a one liner using the pipeline. So you have to use one line, using a pipeline if you can
+
+Do 2 and 3 again
+
+5.	Now with a one-liner remove the text files with the property extension (.txt) , so all the .txt files from the ‘C:\MyDir’ directory, leaving the two ‘.jpg’ 1.jpg and 2.jpg files intact! (Not removing C:\MyDir)
+
+ (remember, you have to filter on a property! Remember the Cmdlet and remember how to find out, which property could do it !)
+
+All in the name of science… sorry again but restore 1.txt and 2.txt in other words create them again in the ‘C:\MyDir’ directory 
+
+6.	Now with a one-liner move (not remove) the text files with the property extension (.txt) , so all the .txt files from the ‘C:\MyDir’ directory, leaving the two ‘.jpg’ 1.jpg and 2.jpg files intact to a new directory called ‘C:\Moved’ 
+
+######################################################
+7.	Now for something completely different… Create 4 local users. User1 and User2 will have the description ‘sales’. User3 and User4 will have the description ‘support’.
+
+8.	Your boss wants you to disable the sales users and change their description into ‘disabled’ (This can be tricky!!)
+
+######################################################
+9.	Retrieve all the processes on your screen with a handle count less than 100. (This is tricky, try looking up how to say ‘less than’ in PowerShell).
+
+1:  New-Item -Path . -Name "MyDir" -ItemType "directory"
+
+2: New-Item -Path . -Name "1.txt" -ItemType "file", New-Item -Path . -Name "2.txt" -ItemType "file"
+
+3: New-Item -Path . -Name "1.jpg" -ItemType "file", New-Item -Path . -Name "2.jpg" -ItemType "file"
+
+4: Get-ChildItem . | Remove-Item
+
+5: Get-ChildItem | Where-Object {$PSItem.Extension -eq ".txt"} | Remove-Item
+
+6: First, create destionation: New-Item -Path .. -Name "Moved" -ItemType "directory", Then move: Get-ChildItem | Where-Object {$PSItem.Extension -eq ".txt"} | Move-Item -Destination "..\Moved"
+
+7: New-LocalUser -Name "User1" -NoPassword -Description "Sales", New-LocalUser -Name "User2" -NoPassword -Description "Sales", New-LocalUser -Name "User3" -NoPassword -Description "Support", New-LocalUser -Name "User4" -NoPassword -Description "Support"
+
+8: First: Get-LocalUser | Where-Object {$PSItem.description -eq "Sales"} | Disable-LocalUser, then Get-LocalUser | Where-Object {$PSItem.description -eq "Sales"} | Set-LocalUser -Description "Disabled"
+
+9:  Get-Process | Where-Object {$_.HandleCount -lt 100}
+
+
+
+
+
+
+
+
