@@ -4,12 +4,12 @@
 
 'Please give me your name:'
 
-$myName = Read-Host
+$Name = Read-Host
 
-'Welcome' + ' ' + $name
+'Welcome' + ' ' + $Name
 
 'Please give me a service'
 
-$service = Read-Host
+$Service = Read-Host
 
-Get-Service -Name $service
+Get-Service -Name $Service

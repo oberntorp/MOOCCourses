@@ -1,20 +1,20 @@
 'Please provide the name of a service to stop'
 
-$serviceName = Read-Host
+$ServiceName = Read-Host
 
-$choosenService = Get-Service -Name $serviceName
+$ChoosenService = Get-Service -Name $ServiceName
 
-'choosen service is ' + $choosenService.Name
+'choosen service is ' + $ChoosenService.Name
 
-$choosenService.Name + ' ' + 'has status' + ' ' + $choosenService.Status
+$ChoosenService.Name + ' ' + 'has status' + ' ' + $ChoosenService.Status
 
-if($choosenService.Status -eq 'Running'){
-    $choosenService | Stop-Service
-    $choosenService.Name + ' ' + 'was' + ' ' + 'stopped'
+if($ChoosenService.Status -eq 'Running'){
+    $ChoosenService | Stop-Service
+    $ChoosenService.Name + ' ' + 'was' + ' ' + 'stopped'
 } else {
-        $choosenService | Start-Service
-        $choosenService.Name + ' ' + 'was' + ' ' + 'started'
+        $ChoosenService | Start-Service
+        $ChoosenService.Name + ' ' + 'was' + ' ' + 'started'
 }
 
-$choosenService.Name + ' ' + 'now has status' + ' ' + $choosenService.Status
+$ChoosenService.Name + ' ' + 'now has status' + ' ' + $ChoosenService.Status
 

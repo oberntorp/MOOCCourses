@@ -1,11 +1,11 @@
-[datetime]$currentDate = Get-Date
-[string]$dayToCheckFor = 'Wednesday'
-'DayOfWeek is' + ' ' + $currentDate.DayOfWeek
- while ($currentDate.DayOfWeek -ne $dayToCheckFor) {
-    'It is'+ ' ' + $currentDate.DayOfWeek + ' ' + 'not Wednesday'
-    $dayToCheckFor = 'Wednesday'
-    $currentDate = Get-Date
+[datetime]$CurrentDate = Get-Date
+[string]$DayToCheckFor = 'Wednesday'
+'DayOfWeek is' + ' ' + $CurrentDate.DayOfWeek
+ while ($CurrentDate.DayOfWeek -ne $DayToCheckFor) {
+    'It is'+ ' ' + $CurrentDate.DayOfWeek + ' ' + 'not Wednesday'
+    $DayToCheckFor = 'Wednesday'
+    $CurrentDate = Get-Date
     Start-Sleep -Milliseconds 1000
  }
 
-'It is' + $dayToCheckFor
+'It is' + $DayToCheckFor
