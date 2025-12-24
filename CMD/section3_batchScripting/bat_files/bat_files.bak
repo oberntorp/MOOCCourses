@@ -1,0 +1,16 @@
+@echo off
+REM loop all files
+REM FOR %%A IN (*) DO (MOVE "%%A" "lesson3_files")
+REM PAUSE
+
+REM loop text files 
+REM FOR %%A IN (*text*.txt) DO (MOVE "%%A" "lesson3_files")
+REM PAUSE
+
+REM parameter extensions
+REM With ~x, ~n, ~a etc, you can print extension of a file, name of a file, the attributes of a file and more, the parameter extension will appear before the parameter, in the case pelow %%~xA, to print the files extension 
+FOR %%A= IN (*) DO (if /I "%%~xA" == ".bat" (MOVE %%A "bat_files")else (echo "%%~xA"))
+PAUSE
+
+:printDone
+echo Done!
