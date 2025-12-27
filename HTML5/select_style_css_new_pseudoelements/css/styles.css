@@ -1,0 +1,43 @@
+select,
+option,
+option::checkmark,
+::picker(select),
+::picker-icon {
+    appearance: none;
+}
+
+select {
+    appearance: base;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: burlywood;
+
+    &::picker(select) {
+        border: 0px;
+        border-bottom: 4px solid green;
+        border-radius: 0px;
+        appearance: base;
+    }
+
+    & option {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(127, 162, 162, 0.5);
+        color: yellowgreen;
+        appearance: base;
+    }
+
+    & option::checkmark {
+        border-bottom: 1px solid rgba(127, 162, 162, 0.5);
+        color: blueviolet;
+        appearance: base;
+    }
+
+    &::picker-icon {
+        height: 0px;
+        width: 0px;
+        border-width: 0px 5px 5px 5px;
+        border-style: solid;
+        border-color: transparent transparent blueviolet transparent;
+        border-radius: 1px;
+    }
+}
