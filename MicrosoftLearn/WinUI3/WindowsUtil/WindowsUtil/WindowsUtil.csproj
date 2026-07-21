@@ -18,6 +18,9 @@
     <EnableMsixTooling>true</EnableMsixTooling>
 
     <Nullable>enable</Nullable>
+
+    <!-- Debug builds run unpackaged so F5 works without deploying an MSIX; Release still packages via Package.appxmanifest for Publish. -->
+    <WindowsPackageType Condition="'$(Configuration)'=='Debug'">None</WindowsPackageType>
   </PropertyGroup>
 
   <ItemGroup>
