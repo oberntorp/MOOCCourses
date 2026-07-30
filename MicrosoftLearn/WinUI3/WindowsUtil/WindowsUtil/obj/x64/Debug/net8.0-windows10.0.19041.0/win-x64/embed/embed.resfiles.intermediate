@@ -1,3 +1,6 @@
 AboutWindow.xbf
 App.xbf
 MainWindow.xbf
+View\ColorPickerWindow.xbf
+View\HTMLViewer.xbf
+View\MQTT.xbf

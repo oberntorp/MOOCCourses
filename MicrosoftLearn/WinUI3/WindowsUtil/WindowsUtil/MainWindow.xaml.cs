@@ -14,6 +14,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using WindowsUtil.View;
 using static System.Net.WebRequestMethods;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -26,72 +27,33 @@ namespace WindowsUtil
     /// </summary>
     public sealed partial class MainWindow : Window
     {
-        private string HttpSendButtonDefaultText = "Send Http Request";
-        private string HttpSendButtonSendingText = "Sending request...";
         public MainWindow()
         {
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void MenuButton_HTMLViewer_Click(object sender, RoutedEventArgs e)
         {
-            TextBlockError.Text = string.Empty;
-            TextBlockError.Visibility = Visibility.Collapsed;
-            TextBlockRequestResult.Text = string.Empty;
-            TextBlockUrl.Text = string.Empty;
-
+            HTMLViewerWindow htmlViewerWindow = new HTMLViewerWindow();
+            htmlViewerWindow.Activate();
         }
 
-        private async void ButtonSendRequest_Click(object sender, RoutedEventArgs e)
+        private void MenuButton_MQTT_Click(object sender, RoutedEventArgs e)
         {
-            TextBlockError.Text = "";
-            TextBlockError.Visibility = Visibility.Collapsed;
-            ButtonSendRequest.IsEnabled = false;
-            ButtonSendRequest.Content = HttpSendButtonSendingText;
-            string requestUri = TextBlockUrl.Text;
-            if(requestUri == string.Empty)
-            {
-                TextBlockError.Text = "Please enter a uri.";
-                TextBlockError.Visibility = Visibility.Visible;
-            }
-
-            string responst = await SendHttpRequest(requestUri);
-
-            TextBlockRequestResult.Text = responst;
-
-            ButtonSendRequest.IsEnabled = true;
-            ButtonSendRequest.Content = HttpSendButtonDefaultText;
-
+            MQTTWindow htmlViewerWindow = new MQTTWindow();
+            htmlViewerWindow.Activate();
         }
 
-        private async Task<string> SendHttpRequest(string requestUri)
+        private void MenuButton_ColorPicker_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-            HttpClient client = new HttpClient();
-            return await client.GetStringAsync(requestUri);
-            }
-            catch(Exception ex)
-            {
-                TextBlockError.Text = $"An error occured: {ex.Message}";
-            }
-            return null;
+            ColorPickerWindow colorPickerWindow = new ColorPickerWindow();
+            colorPickerWindow.Activate();
         }
 
-        private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
+        private void MenuButton_About_Click(object sender, RoutedEventArgs e)
         {
             AboutWindow aboutWindow = new AboutWindow();
             aboutWindow.Activate();
-        }
-
-        private void ButtonSendMQTT_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonStopMQTT_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

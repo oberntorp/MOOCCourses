@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="WindowsUtil.View.MQTTWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WindowsUtil.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="BlankWindow1">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <StackPanel Grid.Row="3" Margin="0 10 0 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0"  Text="Anslut till en MQTT broker" />
+                <Button Grid.Column="0" Grid.Row="1" x:Name="ButtonSendMQTT" Content="Start MQTT Send/Receive" Click="ButtonSendMQTT_Click" Margin="0 0 5 0"/>
+                <Button Grid.Column="1" Grid.Row="1" x:Name="ButtonStopMQTT" Content="Stop MQTT Send/Receive" Click="ButtonStopMQTT_Click" Margin="0 0 5 0"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

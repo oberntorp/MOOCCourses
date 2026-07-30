@@ -50,6 +50,10 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "MQTTnet": {
+              "target": "Package",
+              "version": "[5.2.0.1603, )"
+            },
             "Microsoft.WindowsAppSDK": {
               "target": "Package",
               "version": "[1.6.250205002, )"

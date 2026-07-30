@@ -9,6 +9,6 @@
     mc:Ignorable="d" Title="About">
 
     <Grid>
-        <TextBlock Text="This Application was developed by Oskar Berntorp in September 2023." />
+        <TextBlock Text="This Application was developed by Oskar Berntorp in September 2023 and Beyond." />
     </Grid>
 </Window>

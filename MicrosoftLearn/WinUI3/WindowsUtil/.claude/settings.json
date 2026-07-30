@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"WindowsAppSdkBootstrapInitialize\" -r \"C:\\\\Users\\\\obern/.nuget/packages/microsoft.windowsappsdk/1.6.250205002/build/\" 2>&1)",
+      "Read(//c/Users/obern/.nuget/packages/microsoft.windowsappsdk/1.6.250205002/build/**)",
+      "Bash(grep -n \"WindowsAppSDKSelfContained\" -r \"C:\\\\Users\\\\obern/.nuget/packages/microsoft.windowsappsdk/1.6.250205002/build/Microsoft.WindowsAppSDK.SelfContained.targets\" 2>&1 | head -20)",
+      "Bash(dotnet build *)",
+      "Bash(timeout 8 ./WindowsUtil.exe)",
+      "Bash(echo \"EXITCODE:$?\")",
+      "Bash([ -f \"$vswhere_path\" ])",
+      "Bash('/c/Program Files \\(x86\\)/Microsoft Visual Studio/Installer/vswhere.exe' -latest -products * -property installationPath)",
+      "Bash(powershell.exe -NoProfile -Command 'Get-AppxPackage | Where-Object { $_.PackageFamilyName -like '\\\\''*WinAppRuntime*1.6*'\\\\'' -or $_.PackageFamilyName -like '\\\\''*WindowsAppRuntime.1.6*'\\\\'' } | Select-Object Name, PackageFullName, Version | Format-List')"
+    ]
+  }
+}
