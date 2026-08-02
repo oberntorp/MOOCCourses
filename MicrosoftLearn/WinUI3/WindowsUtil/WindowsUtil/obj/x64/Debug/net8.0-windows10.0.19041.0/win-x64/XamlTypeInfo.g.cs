@@ -226,7 +226,7 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[26];
+            _typeNameTable = new string[40];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -246,15 +246,29 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
             _typeNameTable[16] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
             _typeNameTable[17] = "System.Enum";
             _typeNameTable[18] = "System.ValueType";
-            _typeNameTable[19] = "WindowsUtil.View.ColorPickerWindow";
-            _typeNameTable[20] = "WindowsUtil.View.HTMLViewerWindow";
-            _typeNameTable[21] = "WindowsUtil.View.MQTTWindow";
-            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[23] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[24] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[25] = "Int32";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.ItemsRepeater";
+            _typeNameTable[20] = "Microsoft.UI.Xaml.FrameworkElement";
+            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.Layout";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.Media.Brush";
+            _typeNameTable[24] = "Double";
+            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.ItemsSourceView";
+            _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.UniformGridLayout";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.VirtualizingLayout";
+            _typeNameTable[29] = "Int32";
+            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification";
+            _typeNameTable[31] = "Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch";
+            _typeNameTable[32] = "Microsoft.UI.Xaml.Controls.Orientation";
+            _typeNameTable[33] = "Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation";
+            _typeNameTable[34] = "WindowsUtil.View.ColorPickerWindow";
+            _typeNameTable[35] = "WindowsUtil.Model.Colors";
+            _typeNameTable[36] = "WindowsUtil.View.HTMLViewerWindow";
+            _typeNameTable[37] = "WindowsUtil.View.MQTTWindow";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[39] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
 
-            _typeTable = new global::System.Type[26];
+            _typeTable = new global::System.Type[40];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -274,13 +288,27 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
             _typeTable[16] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
             _typeTable[17] = typeof(global::System.Enum);
             _typeTable[18] = typeof(global::System.ValueType);
-            _typeTable[19] = typeof(global::WindowsUtil.View.ColorPickerWindow);
-            _typeTable[20] = typeof(global::WindowsUtil.View.HTMLViewerWindow);
-            _typeTable[21] = typeof(global::WindowsUtil.View.MQTTWindow);
-            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[24] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[25] = typeof(global::System.Int32);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.ItemsRepeater);
+            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
+            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.Layout);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
+            _typeTable[24] = typeof(global::System.Double);
+            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.ItemsSourceView);
+            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.UniformGridLayout);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.VirtualizingLayout);
+            _typeTable[29] = typeof(global::System.Int32);
+            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification);
+            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch);
+            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Controls.Orientation);
+            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation);
+            _typeTable[34] = typeof(global::WindowsUtil.View.ColorPickerWindow);
+            _typeTable[35] = typeof(global::WindowsUtil.Model.Colors);
+            _typeTable[36] = typeof(global::WindowsUtil.View.HTMLViewerWindow);
+            _typeTable[37] = typeof(global::WindowsUtil.View.MQTTWindow);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[39] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -321,10 +349,15 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
         private object Activate_9_MenuBarItem() { return new global::Microsoft.UI.Xaml.Controls.MenuBarItem(); }
         private object Activate_13_MainWindow() { return new global::WindowsUtil.MainWindow(); }
         private object Activate_14_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
-        private object Activate_19_ColorPickerWindow() { return new global::WindowsUtil.View.ColorPickerWindow(); }
-        private object Activate_20_HTMLViewerWindow() { return new global::WindowsUtil.View.HTMLViewerWindow(); }
-        private object Activate_21_MQTTWindow() { return new global::WindowsUtil.View.MQTTWindow(); }
-        private object Activate_22_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_19_ItemsRepeater() { return new global::Microsoft.UI.Xaml.Controls.ItemsRepeater(); }
+        private object Activate_25_ItemCollectionTransitionProvider() { return new global::Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider(); }
+        private object Activate_27_UniformGridLayout() { return new global::Microsoft.UI.Xaml.Controls.UniformGridLayout(); }
+        private object Activate_28_VirtualizingLayout() { return new global::Microsoft.UI.Xaml.Controls.VirtualizingLayout(); }
+        private object Activate_34_ColorPickerWindow() { return new global::WindowsUtil.View.ColorPickerWindow(); }
+        private object Activate_35_Colors() { return new global::WindowsUtil.Model.Colors(); }
+        private object Activate_36_HTMLViewerWindow() { return new global::WindowsUtil.View.HTMLViewerWindow(); }
+        private object Activate_37_MQTTWindow() { return new global::WindowsUtil.View.MQTTWindow(); }
+        private object Activate_38_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_AboutWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.AboutWindow).TypeHandle);
         private void StaticInitializer_6_MenuBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.MenuBar).TypeHandle);
@@ -336,11 +369,21 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
         private void StaticInitializer_16_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
         private void StaticInitializer_17_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
         private void StaticInitializer_18_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
-        private void StaticInitializer_19_ColorPickerWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.View.ColorPickerWindow).TypeHandle);
-        private void StaticInitializer_20_HTMLViewerWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.View.HTMLViewerWindow).TypeHandle);
-        private void StaticInitializer_21_MQTTWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.View.MQTTWindow).TypeHandle);
-        private void StaticInitializer_22_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_24_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_19_ItemsRepeater() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ItemsRepeater).TypeHandle);
+        private void StaticInitializer_21_Layout() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.Layout).TypeHandle);
+        private void StaticInitializer_25_ItemCollectionTransitionProvider() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider).TypeHandle);
+        private void StaticInitializer_26_ItemsSourceView() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ItemsSourceView).TypeHandle);
+        private void StaticInitializer_27_UniformGridLayout() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.UniformGridLayout).TypeHandle);
+        private void StaticInitializer_28_VirtualizingLayout() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.VirtualizingLayout).TypeHandle);
+        private void StaticInitializer_30_UniformGridLayoutItemsJustification() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification).TypeHandle);
+        private void StaticInitializer_31_UniformGridLayoutItemsStretch() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch).TypeHandle);
+        private void StaticInitializer_33_IndexBasedLayoutOrientation() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation).TypeHandle);
+        private void StaticInitializer_34_ColorPickerWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.View.ColorPickerWindow).TypeHandle);
+        private void StaticInitializer_35_Colors() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.Model.Colors).TypeHandle);
+        private void StaticInitializer_36_HTMLViewerWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.View.HTMLViewerWindow).TypeHandle);
+        private void StaticInitializer_37_MQTTWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WindowsUtil.View.MQTTWindow).TypeHandle);
+        private void StaticInitializer_38_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_39_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -360,7 +403,7 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
             var newItem = (global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_24_IList(object instance, object item)
+        private void VectorAdd_39_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -497,34 +540,156 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 19:   //  WindowsUtil.View.ColorPickerWindow
-                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_19_ColorPickerWindow;
-                userType.StaticInitializer = StaticInitializer_19_ColorPickerWindow;
-                userType.SetIsLocalType();
+            case 19:   //  Microsoft.UI.Xaml.Controls.ItemsRepeater
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
+                userType.Activator = Activate_19_ItemsRepeater;
+                userType.StaticInitializer = StaticInitializer_19_ItemsRepeater;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsRepeater.ItemTemplate");
+                userType.AddMemberName("ItemTemplate");
+                userType.AddMemberName("ItemsSource");
+                userType.AddMemberName("Layout");
+                userType.AddMemberName("Background");
+                userType.AddMemberName("HorizontalCacheLength");
+                userType.AddMemberName("ItemTransitionProvider");
+                userType.AddMemberName("ItemsSourceView");
+                userType.AddMemberName("VerticalCacheLength");
                 xamlType = userType;
                 break;
 
-            case 20:   //  WindowsUtil.View.HTMLViewerWindow
-                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_20_HTMLViewerWindow;
-                userType.StaticInitializer = StaticInitializer_20_HTMLViewerWindow;
-                userType.SetIsLocalType();
-                xamlType = userType;
+            case 20:   //  Microsoft.UI.Xaml.FrameworkElement
+                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  WindowsUtil.View.MQTTWindow
-                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_21_MQTTWindow;
-                userType.StaticInitializer = StaticInitializer_21_MQTTWindow;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 22:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 21:   //  Microsoft.UI.Xaml.Controls.Layout
                 userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_22_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_22_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_21_Layout;
+                userType.AddMemberName("IndexBasedLayoutOrientation");
+                xamlType = userType;
+                break;
+
+            case 22:   //  Microsoft.UI.Xaml.DependencyObject
+                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 23:   //  Microsoft.UI.Xaml.Media.Brush
+                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 24:   //  Double
+                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 25:   //  Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_25_ItemCollectionTransitionProvider;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 26:   //  Microsoft.UI.Xaml.Controls.ItemsSourceView
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_26_ItemsSourceView;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 27:   //  Microsoft.UI.Xaml.Controls.UniformGridLayout
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.VirtualizingLayout"));
+                userType.Activator = Activate_27_UniformGridLayout;
+                userType.StaticInitializer = StaticInitializer_27_UniformGridLayout;
+                userType.AddMemberName("MinItemHeight");
+                userType.AddMemberName("MinItemWidth");
+                userType.AddMemberName("MinRowSpacing");
+                userType.AddMemberName("MinColumnSpacing");
+                userType.AddMemberName("MaximumRowsOrColumns");
+                userType.AddMemberName("ItemsJustification");
+                userType.AddMemberName("ItemsStretch");
+                userType.AddMemberName("Orientation");
+                xamlType = userType;
+                break;
+
+            case 28:   //  Microsoft.UI.Xaml.Controls.VirtualizingLayout
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Layout"));
+                userType.Activator = Activate_28_VirtualizingLayout;
+                userType.StaticInitializer = StaticInitializer_28_VirtualizingLayout;
+                xamlType = userType;
+                break;
+
+            case 29:   //  Int32
+                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 30:   //  Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_30_UniformGridLayoutItemsJustification;
+                userType.AddEnumValue("Start", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification.Start);
+                userType.AddEnumValue("Center", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification.Center);
+                userType.AddEnumValue("End", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification.End);
+                userType.AddEnumValue("SpaceAround", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification.SpaceAround);
+                userType.AddEnumValue("SpaceBetween", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification.SpaceBetween);
+                userType.AddEnumValue("SpaceEvenly", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification.SpaceEvenly);
+                xamlType = userType;
+                break;
+
+            case 31:   //  Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_31_UniformGridLayoutItemsStretch;
+                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch.None);
+                userType.AddEnumValue("Fill", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch.Fill);
+                userType.AddEnumValue("Uniform", global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch.Uniform);
+                xamlType = userType;
+                break;
+
+            case 32:   //  Microsoft.UI.Xaml.Controls.Orientation
+                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 33:   //  Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_33_IndexBasedLayoutOrientation;
+                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation.None);
+                userType.AddEnumValue("TopToBottom", global::Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation.TopToBottom);
+                userType.AddEnumValue("LeftToRight", global::Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation.LeftToRight);
+                xamlType = userType;
+                break;
+
+            case 34:   //  WindowsUtil.View.ColorPickerWindow
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType.Activator = Activate_34_ColorPickerWindow;
+                userType.StaticInitializer = StaticInitializer_34_ColorPickerWindow;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 35:   //  WindowsUtil.Model.Colors
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_35_Colors;
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 36:   //  WindowsUtil.View.HTMLViewerWindow
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType.Activator = Activate_36_HTMLViewerWindow;
+                userType.StaticInitializer = StaticInitializer_36_HTMLViewerWindow;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 37:   //  WindowsUtil.View.MQTTWindow
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType.Activator = Activate_37_MQTTWindow;
+                userType.StaticInitializer = StaticInitializer_37_MQTTWindow;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 38:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+                userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.Activator = Activate_38_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_38_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -536,20 +701,12 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 23:   //  Microsoft.UI.Xaml.DependencyObject
-                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 24:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 39:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_24_IList;
-                userType.CollectionAdd = VectorAdd_24_IList;
+                userType.StaticInitializer = StaticInitializer_39_IList;
+                userType.CollectionAdd = VectorAdd_39_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
-                break;
-
-            case 25:   //  Int32
-                xamlType = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -650,52 +807,217 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Media.MicaBackdrop)instance;
             that.Kind = (global::Microsoft.UI.Composition.SystemBackdrops.MicaKind)Value;
         }
-        private object get_5_TreeViewNode_Children(object instance)
+        private object get_5_ItemsRepeater_ItemTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.ItemTemplate;
+        }
+        private void set_5_ItemsRepeater_ItemTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            that.ItemTemplate = (global::System.Object)Value;
+        }
+        private object get_6_ItemsRepeater_ItemsSource(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.ItemsSource;
+        }
+        private void set_6_ItemsRepeater_ItemsSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            that.ItemsSource = (global::System.Object)Value;
+        }
+        private object get_7_ItemsRepeater_Layout(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.Layout;
+        }
+        private void set_7_ItemsRepeater_Layout(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            that.Layout = (global::Microsoft.UI.Xaml.Controls.Layout)Value;
+        }
+        private object get_8_ItemsRepeater_Background(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.Background;
+        }
+        private void set_8_ItemsRepeater_Background(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            that.Background = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_9_ItemsRepeater_HorizontalCacheLength(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.HorizontalCacheLength;
+        }
+        private void set_9_ItemsRepeater_HorizontalCacheLength(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            that.HorizontalCacheLength = (global::System.Double)Value;
+        }
+        private object get_10_ItemsRepeater_ItemTransitionProvider(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.ItemTransitionProvider;
+        }
+        private void set_10_ItemsRepeater_ItemTransitionProvider(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            that.ItemTransitionProvider = (global::Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider)Value;
+        }
+        private object get_11_ItemsRepeater_ItemsSourceView(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.ItemsSourceView;
+        }
+        private object get_12_ItemsRepeater_VerticalCacheLength(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            return that.VerticalCacheLength;
+        }
+        private void set_12_ItemsRepeater_VerticalCacheLength(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsRepeater)instance;
+            that.VerticalCacheLength = (global::System.Double)Value;
+        }
+        private object get_13_UniformGridLayout_MinItemHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.MinItemHeight;
+        }
+        private void set_13_UniformGridLayout_MinItemHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.MinItemHeight = (global::System.Double)Value;
+        }
+        private object get_14_UniformGridLayout_MinItemWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.MinItemWidth;
+        }
+        private void set_14_UniformGridLayout_MinItemWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.MinItemWidth = (global::System.Double)Value;
+        }
+        private object get_15_UniformGridLayout_MinRowSpacing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.MinRowSpacing;
+        }
+        private void set_15_UniformGridLayout_MinRowSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.MinRowSpacing = (global::System.Double)Value;
+        }
+        private object get_16_UniformGridLayout_MinColumnSpacing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.MinColumnSpacing;
+        }
+        private void set_16_UniformGridLayout_MinColumnSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.MinColumnSpacing = (global::System.Double)Value;
+        }
+        private object get_17_UniformGridLayout_MaximumRowsOrColumns(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.MaximumRowsOrColumns;
+        }
+        private void set_17_UniformGridLayout_MaximumRowsOrColumns(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.MaximumRowsOrColumns = (global::System.Int32)Value;
+        }
+        private object get_18_UniformGridLayout_ItemsJustification(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.ItemsJustification;
+        }
+        private void set_18_UniformGridLayout_ItemsJustification(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.ItemsJustification = (global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification)Value;
+        }
+        private object get_19_UniformGridLayout_ItemsStretch(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.ItemsStretch;
+        }
+        private void set_19_UniformGridLayout_ItemsStretch(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.ItemsStretch = (global::Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch)Value;
+        }
+        private object get_20_UniformGridLayout_Orientation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            return that.Orientation;
+        }
+        private void set_20_UniformGridLayout_Orientation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.UniformGridLayout)instance;
+            that.Orientation = (global::Microsoft.UI.Xaml.Controls.Orientation)Value;
+        }
+        private object get_21_Layout_IndexBasedLayoutOrientation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Layout)instance;
+            return that.IndexBasedLayoutOrientation;
+        }
+        private object get_22_ColorPickerWindow_ViewModel(object instance)
+        {
+            var that = (global::WindowsUtil.View.ColorPickerWindow)instance;
+            return that.ViewModel;
+        }
+        private object get_23_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_6_TreeViewNode_Content(object instance)
+        private object get_24_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_6_TreeViewNode_Content(object instance, object Value)
+        private void set_24_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_7_TreeViewNode_Depth(object instance)
+        private object get_25_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_8_TreeViewNode_HasChildren(object instance)
+        private object get_26_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_9_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_27_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_9_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_27_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_10_TreeViewNode_IsExpanded(object instance)
+        private object get_28_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_10_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_28_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_11_TreeViewNode_Parent(object instance)
+        private object get_29_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -743,50 +1065,173 @@ namespace WindowsUtil.WindowsUtil_XamlTypeInfo
                 xamlMember.Getter = get_4_MicaBackdrop_Kind;
                 xamlMember.Setter = set_4_MicaBackdrop_Kind;
                 break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.ItemTemplate":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_5_ItemsRepeater_ItemTemplate;
+                xamlMember.Setter = set_5_ItemsRepeater_ItemTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.ItemsSource":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_6_ItemsRepeater_ItemsSource;
+                xamlMember.Setter = set_6_ItemsRepeater_ItemsSource;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.Layout":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "Layout", "Microsoft.UI.Xaml.Controls.Layout");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_7_ItemsRepeater_Layout;
+                xamlMember.Setter = set_7_ItemsRepeater_Layout;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.Background":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_8_ItemsRepeater_Background;
+                xamlMember.Setter = set_8_ItemsRepeater_Background;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.HorizontalCacheLength":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "HorizontalCacheLength", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_9_ItemsRepeater_HorizontalCacheLength;
+                xamlMember.Setter = set_9_ItemsRepeater_HorizontalCacheLength;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.ItemTransitionProvider":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "ItemTransitionProvider", "Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_10_ItemsRepeater_ItemTransitionProvider;
+                xamlMember.Setter = set_10_ItemsRepeater_ItemTransitionProvider;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.ItemsSourceView":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "ItemsSourceView", "Microsoft.UI.Xaml.Controls.ItemsSourceView");
+                xamlMember.Getter = get_11_ItemsRepeater_ItemsSourceView;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsRepeater.VerticalCacheLength":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsRepeater");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "VerticalCacheLength", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_12_ItemsRepeater_VerticalCacheLength;
+                xamlMember.Setter = set_12_ItemsRepeater_VerticalCacheLength;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.MinItemHeight":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "MinItemHeight", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_13_UniformGridLayout_MinItemHeight;
+                xamlMember.Setter = set_13_UniformGridLayout_MinItemHeight;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.MinItemWidth":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "MinItemWidth", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_14_UniformGridLayout_MinItemWidth;
+                xamlMember.Setter = set_14_UniformGridLayout_MinItemWidth;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.MinRowSpacing":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "MinRowSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_15_UniformGridLayout_MinRowSpacing;
+                xamlMember.Setter = set_15_UniformGridLayout_MinRowSpacing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.MinColumnSpacing":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "MinColumnSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_16_UniformGridLayout_MinColumnSpacing;
+                xamlMember.Setter = set_16_UniformGridLayout_MinColumnSpacing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.MaximumRowsOrColumns":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "MaximumRowsOrColumns", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_17_UniformGridLayout_MaximumRowsOrColumns;
+                xamlMember.Setter = set_17_UniformGridLayout_MaximumRowsOrColumns;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.ItemsJustification":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "ItemsJustification", "Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_18_UniformGridLayout_ItemsJustification;
+                xamlMember.Setter = set_18_UniformGridLayout_ItemsJustification;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.ItemsStretch":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "ItemsStretch", "Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_19_UniformGridLayout_ItemsStretch;
+                xamlMember.Setter = set_19_UniformGridLayout_ItemsStretch;
+                break;
+            case "Microsoft.UI.Xaml.Controls.UniformGridLayout.Orientation":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UniformGridLayout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "Orientation", "Microsoft.UI.Xaml.Controls.Orientation");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_20_UniformGridLayout_Orientation;
+                xamlMember.Setter = set_20_UniformGridLayout_Orientation;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Layout.IndexBasedLayoutOrientation":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Layout");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "IndexBasedLayoutOrientation", "Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation");
+                xamlMember.Getter = get_21_Layout_IndexBasedLayoutOrientation;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "WindowsUtil.View.ColorPickerWindow.ViewModel":
+                userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WindowsUtil.View.ColorPickerWindow");
+                xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "ViewModel", "WindowsUtil.Model.Colors");
+                xamlMember.Getter = get_22_ColorPickerWindow_ViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_5_TreeViewNode_Children;
+                xamlMember.Getter = get_23_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_6_TreeViewNode_Content;
-                xamlMember.Setter = set_6_TreeViewNode_Content;
+                xamlMember.Getter = get_24_TreeViewNode_Content;
+                xamlMember.Setter = set_24_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_TreeViewNode_Depth;
+                xamlMember.Getter = get_25_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_26_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_9_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_9_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_27_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_27_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_10_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_28_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_28_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WindowsUtil.WindowsUtil_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_11_TreeViewNode_Parent;
+                xamlMember.Getter = get_29_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }

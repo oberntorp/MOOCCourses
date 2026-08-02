@@ -6,6 +6,7 @@
     xmlns:local="using:WindowsUtil.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:WindowsUtil.Model"
     mc:Ignorable="d"
     Title="ColorPalette">
 
@@ -13,7 +14,21 @@
         <MicaBackdrop />
     </Window.SystemBackdrop>
 
-    <Grid>
+    <Grid x:Name="GridRoot">
+        <Border BorderBrush="Black" BorderThickness="1">
+            <ItemsRepeater ItemsSource="{x:Bind ViewModel.AvailableColors}">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout
+                    MinItemHeight="20" MinItemWidth="20" MinRowSpacing="0" MinColumnSpacing="0" MaximumRowsOrColumns="4">
+                    </UniformGridLayout>
+                </ItemsRepeater.Layout>
 
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate x:DataType="model:ColorPaletteColor">
+                        <Border Width="30" Height="20" Background="{Binding Brush}" BorderBrush="Black" BorderThickness="1" />
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+        </Border>
     </Grid>
 </Window>

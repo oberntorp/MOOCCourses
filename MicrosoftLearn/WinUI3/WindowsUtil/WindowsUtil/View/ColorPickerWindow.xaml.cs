@@ -1,4 +1,5 @@
 using Microsoft.UI.Xaml;
+using WindowsUtil.Model;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -23,6 +24,7 @@ namespace WindowsUtil.View
     /// </summary>
     public sealed partial class ColorPickerWindow : Window
     {
+        public Colors ViewModel { get; } = new Colors();
         public ColorPickerWindow()
         {
             InitializeComponent();
