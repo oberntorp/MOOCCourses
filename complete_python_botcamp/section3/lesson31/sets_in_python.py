@@ -8,7 +8,7 @@ print(myset)
 # If trying to add a value a second time, it will not be repeated
 myset.add(3)
 print(myset)
-# Sets can be used to cast a list to a set, and get trhe unique values
+# Sets can be used to cast a list to a set, and get the unique values
 mylist = [1,1,2,2,3,3]
 unique_values_of_list = set(mylist)
 print(unique_values_of_list)
